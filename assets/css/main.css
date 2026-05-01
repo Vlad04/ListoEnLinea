@@ -656,7 +656,7 @@ h6 {
   padding-top: 5px;
 }
 .footer-logo {
-    height: 100px;
+    height: 100px !important;
     width: auto;
 }
 /*--------------------------------------------------------------
