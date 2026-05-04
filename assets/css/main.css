@@ -2639,3 +2639,318 @@ section,
 .header .logo img {
   max-height: 48px;
 }
+
+/* ==================================================
+   FIX RESPONSIVE GENERAL - LISTO EN LÍNEA
+================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.main,
+section,
+.container,
+.container-fluid {
+  max-width: 100%;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ==================================================
+   HEADER RESPONSIVE
+================================================== */
+
+@media (max-width: 1199px) {
+  .header .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header .logo img,
+  .header img.logo {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .header .cta-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .logo img,
+  .header img.logo {
+    max-width: 125px;
+  }
+}
+
+/* ==================================================
+   HERO RESPONSIVE
+================================================== */
+
+.hero,
+.hero .carousel,
+.hero .carousel-item {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero .carousel-item img,
+.hero .carousel-bg {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .carousel-container {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .hero .carousel,
+  .hero .carousel-item {
+    min-height: 100vh;
+  }
+
+  .hero .carousel-container {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+}
+
+/* ==================================================
+   CARDS / SECTIONS RESPONSIVE
+================================================== */
+
+.service-item,
+.pricing-item,
+.portfolio-item,
+.info-item,
+.faq-item,
+.stats-item,
+.client-logo,
+article {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.section-title h2 {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .features-item {
+    gap: 12px;
+  }
+
+  .features-item i {
+    font-size: 28px;
+  }
+
+  .pricing .pricing-item,
+  .portfolio .portfolio-item,
+  .service-item,
+  .client-logo,
+  .faq-item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ==================================================
+   CONTACT RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+  .contact .php-email-form {
+    width: 100%;
+  }
+
+  .contact .row {
+    --bs-gutter-x: 0;
+  }
+
+  .contact .col-lg-4,
+  .contact .col-lg-5,
+  .contact .col-lg-8 {
+    width: 100%;
+  }
+
+  .contact .info-item {
+    padding-right: 0;
+  }
+}
+
+/* ==================================================
+   FOOTER NUEVO
+================================================== */
+
+.footer {
+  overflow: hidden;
+  padding: 60px 0 30px;
+  background: #02060c;
+}
+
+.footer .footer-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.footer-logo {
+  width: 240px;
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(15, 151, 186, 0.25));
+}
+
+.footer-description {
+  max-width: 850px;
+  margin: 0 auto 36px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.footer .social-links {
+  margin-bottom: 36px;
+  gap: 14px;
+}
+
+.footer .social-links a {
+  width: 46px;
+  height: 46px;
+  background: #0f97ba;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  background: #ffffff;
+  color: #0f97ba;
+  transform: translateY(-4px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 28px;
+}
+
+.footer .copyright,
+.footer .credits {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer .sitename {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 18px 28px;
+  }
+
+  .footer-logo {
+    width: 190px;
+    max-width: 75%;
+  }
+
+  .footer-description {
+    max-width: 92%;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer .social-links a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer .copyright,
+  .footer .credits {
+    font-size: 13px;
+  }
+}
+
+/* ==================================================
+   BOTÓN SCROLL TOP
+================================================== */
+
+.scroll-top {
+  right: 18px;
+  bottom: 18px;
+}
+
+@media (max-width: 576px) {
+  .scroll-top {
+    right: 14px;
+    bottom: 14px;
+    width: 42px;
+    height: 42px;
+  }
+}
