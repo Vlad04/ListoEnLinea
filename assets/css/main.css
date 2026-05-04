@@ -3226,3 +3226,44 @@ article,
     overflow-x: hidden;
   }
 }
+
+/* FIX Stats Section */
+.stats .stats-item span {
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 1.1;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.stats .stats-item p {
+  max-width: 260px;
+  margin: 12px auto 0;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.stats .row {
+  justify-content: center;
+}
+
+@media (max-width: 1199px) {
+  .stats .stats-item span {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats .stats-item {
+    padding: 20px 12px;
+  }
+
+  .stats .stats-item span {
+    font-size: 32px;
+    white-space: normal;
+  }
+
+  .stats .stats-item p {
+    font-size: 15px;
+  }
+}
