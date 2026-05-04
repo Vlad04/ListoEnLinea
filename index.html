@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Listo En Línea</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Listo En Línea | Soluciones digitales para negocios</title>
+  <meta name="description" content="Desarrollamos sitios web, aplicaciones, automatizaciones y soluciones digitales a la medida para negocios que buscan crecer, optimizarse y mejorar su presencia digital.">
+  <meta name="keywords" content="desarrollo web, aplicaciones móviles, automatización, consultoría tecnológica, páginas web, soluciones digitales, Guadalajara, México">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icono/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icono/favicon-16x16.png">
   <link rel="shortcut icon" href="assets/img/icono/favicon.ico">
-
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icono/apple-touch-icon.png">
-
   <link rel="manifest" href="assets/img/icono/site.webmanifest">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+  <!-- Performance preload -->
+  <link rel="preload" as="image" href="assets/img/logo_listo_white.png">
+  <link rel="preload" as="image" href="assets/img/hero-carousel/hero-carousel-1.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="index-page">
@@ -40,7 +42,9 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename"><img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="logo"></h1>
+        <h1 class="sitename">
+          <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="logo" width="180" height="60">
+        </h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -62,7 +66,7 @@
 
   <main class="main">
 
-    <!-- Hero Section con carrusel de Sailor -->
+    <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
@@ -71,60 +75,54 @@
           <div class="carousel-bg" style="background-image: url('assets/img/hero-carousel/hero-carousel-1.jpg');"></div>
 
           <div class="carousel-container text-center">
-
-            <!-- LOGO GRANDE -->
-
             <h2>Desarrollamos software a la medida de tu negocio</h2>
-
             <p>
               Creamos aplicaciones web escalables, seguras y diseñadas para optimizar tus procesos y aumentar tu
               productividad.
             </p>
-
             <a href="#contact" class="btn-get-started">Contáctanos</a>
-
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="Aplicaciones móviles para negocios" loading="lazy" decoding="async">
           <div class="carousel-container">
             <h2>Lleva tu negocio al siguiente nivel con apps móviles</h2>
-            <p>Diseñamos aplicaciones intuitivas para iOS y Android que conectan con tus usuarios y potencian tu
-              crecimiento.</p>
+            <p>
+              Diseñamos aplicaciones intuitivas para iOS y Android que conectan con tus usuarios y potencian tu
+              crecimiento.
+            </p>
             <a href="#contact" class="btn-get-started">Contáctanos</a>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="Soluciones digitales a la medida" loading="lazy" decoding="async">
           <div class="carousel-container">
             <h2>Diseñamos soluciones, no solo aplicaciones</h2>
-            <p>Analizamos tu negocio, definimos la mejor estrategia digital y construimos tecnología que realmente
-              genera resultados.</p>
+            <p>
+              Analizamos tu negocio, definimos la mejor estrategia digital y construimos tecnología que realmente
+              genera resultados.
+            </p>
             <a href="#contact" class="btn-get-started">Contáctanos</a>
           </div>
         </div>
 
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev" aria-label="Anterior">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </a>
 
-        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next" aria-label="Siguiente">
           <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
         </a>
 
         <ol class="carousel-indicators"></ol>
 
       </div>
-
     </section>
-    <!-- /Hero Section -->
 
     <!-- About Section -->
     <section id="about" class="about section bg-light">
-
-      <!-- TÍTULO -->
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Impulsamos el crecimiento de tu negocio con tecnología</h2>
         <p class="mx-auto" style="max-width: 700px;">
@@ -133,13 +131,10 @@
       </div>
 
       <div class="container">
-
         <div class="row gy-4">
 
-          <!-- TARJETA IZQUIERDA -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="bg-white shadow-sm p-4 rounded-4 h-100">
-
               <p>
                 Muchas empresas operan con procesos manuales, herramientas limitadas o sistemas que no se adaptan a su
                 forma de trabajar.
@@ -154,25 +149,20 @@
                   <i style="color: #0F97BA !important" class="bi bi-check2-circle me-2 text-success"></i>
                   <span>Mejoramos la organización y control de tu información</span>
                 </li>
-
                 <li class="d-flex align-items-start mb-2">
                   <i style="color: #0F97BA !important" class="bi bi-check2-circle me-2 text-success"></i>
                   <span>Automatizamos procesos para ahorrar tiempo y reducir errores</span>
                 </li>
-
                 <li class="d-flex align-items-start">
                   <i style="color: #0F97BA !important" class="bi bi-check2-circle me-2 text-success"></i>
                   <span>Impulsamos tu presencia digital y tus ventas</span>
                 </li>
               </ul>
-
             </div>
           </div>
 
-          <!-- TARJETA DERECHA -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="bg-white shadow-sm p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
-
               <div>
                 <p>
                   Nos enfocamos en pequeñas y medianas empresas que buscan crecer, optimizarse y modernizarse sin
@@ -180,17 +170,16 @@
                 </p>
 
                 <p><strong>Acompañamos cada proyecto con:</strong></p>
+
                 <ul style="padding-top:3%" class="list-unstyled mt-3">
                   <li class="d-flex align-items-start mb-2">
                     <i style="color: #0F97BA !important" class="bi bi-check2-circle me-2 text-success"></i>
                     <span>Consultoría personalizada</span>
                   </li>
-
                   <li class="d-flex align-items-start mb-2">
                     <i style="color: #0F97BA !important" class="bi bi-check2-circle me-2 text-success"></i>
                     <span>Demostraciones y pruebas sin costo</span>
                   </li>
-
                   <li class="d-flex align-items-start">
                     <i style="color: #0F97BA !important" class="bi bi-check2-circle me-2 text-success"></i>
                     <span>Desarrollo a la medida de tus necesidades</span>
@@ -201,19 +190,15 @@
               <a href="#contact" class="btn btn-success mt-3 w-100 text-wrap">
                 Solicitar asesoría gratuita <i class="bi bi-arrow-right ms-1"></i>
               </a>
-
             </div>
           </div>
 
         </div>
-
       </div>
-
     </section>
 
     <!-- Mission Vision Section -->
     <section id="mission-vision" class="mission-vision section">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Misión y visión</h2>
         <p class="mx-auto" style="max-width: 760px;">
@@ -231,9 +216,8 @@
                 <h3 class="mb-0">Misión</h3>
               </div>
               <p>
-                Ayudar a las empresas a mejorar su operación, aumentar su visibilidad
-                y crecer mediante soluciones digitales a la medida, acompañadas de consultoría, claridad y soporte
-                durante todo el proyecto.
+                Ayudar a las empresas a mejorar su operación, aumentar su visibilidad y crecer mediante soluciones
+                digitales a la medida, acompañadas de consultoría, claridad y soporte durante todo el proyecto.
               </p>
             </div>
           </div>
@@ -259,29 +243,24 @@
         </div>
 
         <div class="container">
-
           <div class="row gy-4">
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div class="service-item position-relative h-100 bg-white shadow-sm rounded-4 p-4">
-                <div class="icon mb-3">
-                </div>
                 <h3>Consultoría tecnológica</h3>
                 <p>
-                  Analizamos tu negocio, detectamos áreas de oportunidad y proponemos soluciones digitales
-                  alineadas a tus procesos y objetivos.
+                  Analizamos tu negocio, detectamos áreas de oportunidad y proponemos soluciones digitales alineadas a
+                  tus procesos y objetivos.
                 </p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
               <div class="service-item position-relative h-100 bg-white shadow-sm rounded-4 p-4">
-                <div class="icon mb-3">
-                </div>
                 <h3>Desarrollo web a la medida</h3>
                 <p>
-                  Creamos sitios y plataformas web pensadas para mejorar tu presencia digital, generar confianza
-                  y apoyar tus ventas.
+                  Creamos sitios y plataformas web pensadas para mejorar tu presencia digital, generar confianza y
+                  apoyar tus ventas.
                 </p>
               </div>
             </div>
@@ -301,33 +280,26 @@
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
               <div class="service-item position-relative h-100 bg-white shadow-sm rounded-4 p-4">
-                <div class="icon mb-3">
-                </div>
                 <h3>Automatización de procesos</h3>
                 <p>
-                  Reducimos tareas manuales, errores y tiempos de operación mediante herramientas que hacen
-                  más eficiente tu trabajo diario.
+                  Reducimos tareas manuales, errores y tiempos de operación mediante herramientas que hacen más
+                  eficiente tu trabajo diario.
                 </p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div class="service-item position-relative h-100 bg-white shadow-sm rounded-4 p-4">
-                <div class="icon mb-3">
-                </div>
                 <h3>Gestión y organización de datos</h3>
                 <p>
-                  Te ayudamos a estructurar mejor tu información para que puedas administrarla con control,
-                  claridad y utilidad para la toma de decisiones.
+                  Te ayudamos a estructurar mejor tu información para que puedas administrarla con control, claridad y
+                  utilidad para la toma de decisiones.
                 </p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
               <div class="service-item position-relative h-100 bg-white shadow-sm rounded-4 p-4">
-                <div class="icon mb-3">
-                  <!--<i class="bi bi-check2-square"></i>-->
-                </div>
                 <h3>Demos y pruebas sin costo</h3>
                 <p>
                   Queremos que avances con confianza. Por eso ofrecemos acompañamiento, demostraciones y pruebas
@@ -337,19 +309,15 @@
             </div>
 
           </div>
-
         </div>
       </div>
-
     </section>
 
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/cta-bg.jpg" alt="Tecnología para negocios">
+      <img src="assets/img/cta-bg.jpg" alt="Tecnología para negocios" loading="lazy" decoding="async">
 
       <div class="container">
-
         <div class="row align-items-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-8 text-center text-xl-start">
             <h3>Convierte tus retos en oportunidades con tecnología</h3>
@@ -362,14 +330,11 @@
             <a class="cta-btn align-middle" href="#contact">Solicitar asesoría gratuita</a>
           </div>
         </div>
-
       </div>
-
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features section">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>¿Por qué trabajar con nosotros?</h2>
         <p class="mx-auto" style="max-width: 760px;">
@@ -379,11 +344,10 @@
       </div>
 
       <div class="container">
-
         <div class="row gy-4 align-items-center">
 
           <div class="features-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/features-bg.jpg" alt="Soluciones digitales a la medida">
+            <img src="assets/img/features-bg.jpg" alt="Soluciones digitales a la medida" loading="lazy" decoding="async">
           </div>
 
           <div class="col-lg-6 order-lg-1">
@@ -408,8 +372,7 @@
               <i class="bi bi-graph-up-arrow flex-shrink-0"></i>
               <div>
                 <h4>Enfoque en crecimiento y resultados</h4>
-                <p>Buscamos mejorar ventas, organización, eficiencia y presencia digital con impacto real en tu negocio.
-                </p>
+                <p>Buscamos mejorar ventas, organización, eficiencia y presencia digital con impacto real en tu negocio.</p>
               </div>
             </div>
 
@@ -422,27 +385,21 @@
             </div>
 
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- Clients / Sectores Section -->
+    <!-- Clients Section -->
     <section id="clients" class="clients section light-background">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Sectores con los que queremos crecer</h2>
         <p class="mx-auto" style="max-width: 760px;">
           Nuestro enfoque está en pequeñas y medianas empresas mexicanas que buscan modernizarse, organizar mejor su
-          operación
-          y aprovechar la tecnología con sentido estratégico.
+          operación y aprovechar la tecnología con sentido estratégico.
         </p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row g-4">
 
           <div class="col-lg-3 col-md-6">
@@ -474,18 +431,14 @@
           </div>
 
         </div>
-
       </div>
-
     </section>
 
     <!-- Stats Section -->
     <section id="stats" class="stats section dark-background">
-
-      <img src="assets/img/stats-bg.jpg" alt="Impacto con tecnología" data-aos="fade-in">
+      <img src="assets/img/stats-bg.jpg" alt="Impacto con tecnología" loading="lazy" decoding="async">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
         <div class="subheading">
           <h3>Lo que buscamos generar en cada proyecto</h3>
           <p>
@@ -495,7 +448,6 @@
         </div>
 
         <div class="row gy-4">
-
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span>+Visibilidad</span>
@@ -523,16 +475,12 @@
               <p>Soluciones pensadas para apoyar ventas, operación y expansión.</p>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Cómo podemos ayudarte</h2>
         <p class="mx-auto" style="max-width: 760px;">
@@ -541,13 +489,11 @@
       </div>
 
       <div class="container">
-
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6">
             <div class="portfolio-item rounded-4 overflow-hidden shadow-sm bg-white h-100">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid"
-                alt="Sitios web empresariales">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="Sitios web empresariales" loading="lazy" decoding="async">
               <div class="portfolio-info position-static opacity-100">
                 <h4>Sitios web empresariales</h4>
                 <p>Presencia digital profesional para generar confianza, visibilidad y oportunidades de venta.</p>
@@ -557,30 +503,27 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="portfolio-item rounded-4 overflow-hidden shadow-sm bg-white h-100">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid"
-                alt="Aplicaciones móviles">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="Aplicaciones móviles" loading="lazy" decoding="async">
               <div class="portfolio-info position-static opacity-100">
                 <h4>Aplicaciones móviles</h4>
-                <p>Apps para mejorar interacción con clientes, agilizar procesos y llevar tu operación a cualquier
-                  lugar.</p>
+                <p>Apps para mejorar interacción con clientes, agilizar procesos y llevar tu operación a cualquier lugar.</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="portfolio-item rounded-4 overflow-hidden shadow-sm bg-white h-100">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="Sistemas internos">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="Sistemas internos" loading="lazy" decoding="async">
               <div class="portfolio-info position-static opacity-100">
                 <h4>Sistemas internos</h4>
-                <p>Herramientas para organizar datos, controlar procesos y tener mayor claridad en la operación diaria.
-                </p>
+                <p>Herramientas para organizar datos, controlar procesos y tener mayor claridad en la operación diaria.</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="portfolio-item rounded-4 overflow-hidden shadow-sm bg-white h-100">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="Automatización">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="Automatización" loading="lazy" decoding="async">
               <div class="portfolio-info position-static opacity-100">
                 <h4>Automatización de procesos</h4>
                 <p>Reducimos tareas repetitivas y mejoramos tiempos con soluciones hechas para tu flujo de trabajo.</p>
@@ -590,8 +533,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="portfolio-item rounded-4 overflow-hidden shadow-sm bg-white h-100">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid"
-                alt="Dashboards y datos">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="Dashboards y datos" loading="lazy" decoding="async">
               <div class="portfolio-info position-static opacity-100">
                 <h4>Dashboards y gestión de datos</h4>
                 <p>Organiza la información de tu negocio y conviértela en decisiones más claras y oportunas.</p>
@@ -601,7 +543,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="portfolio-item rounded-4 overflow-hidden shadow-sm bg-white h-100">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="Consultoría">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="Consultoría" loading="lazy" decoding="async">
               <div class="portfolio-info position-static opacity-100">
                 <h4>Consultoría y validación</h4>
                 <p>Te acompañamos desde la idea inicial con demos, pruebas y orientación para avanzar con confianza.</p>
@@ -610,14 +552,11 @@
           </div>
 
         </div>
-
       </div>
-
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section light-background">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Formas de trabajar contigo</h2>
         <p class="mx-auto" style="max-width: 760px;">
@@ -627,7 +566,6 @@
       </div>
 
       <div class="container">
-
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -680,15 +618,13 @@
               </ul>
             </div>
           </div>
+
         </div>
       </div>
-
-
     </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="faq section">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Preguntas frecuentes</h2>
         <p class="mx-auto" style="max-width: 760px;">
@@ -698,11 +634,9 @@
       </div>
 
       <div class="container">
-
         <div class="row gy-4 align-items-center">
 
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-
             <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
 
               <div class="faq-item faq-active">
@@ -711,8 +645,7 @@
                 <div class="faq-content">
                   <p>
                     No. Nuestro enfoque es ayudarte a resolver necesidades reales del negocio. Eso puede incluir sitios
-                    web,
-                    sistemas internos, apps móviles, automatización, organización de datos o consultoría.
+                    web, sistemas internos, apps móviles, automatización, organización de datos o consultoría.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -755,23 +688,18 @@
               </div>
 
             </div>
-
           </div>
 
           <div class="col-lg-5 order-1 order-lg-2">
-            <img src="assets/img/faq.jpg" class="img-fluid rounded-4 shadow-sm" alt="Preguntas frecuentes"
-              data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/img/faq.jpg" class="img-fluid rounded-4 shadow-sm" alt="Preguntas frecuentes" loading="lazy" decoding="async" data-aos="zoom-in" data-aos-delay="100">
           </div>
 
         </div>
-
       </div>
-
     </section>
 
-    <!-- Recent Posts / Insights Section -->
+    <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section light-background">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Nuestra forma de pensar</h2>
         <p class="mx-auto" style="max-width: 760px;">
@@ -780,13 +708,12 @@
       </div>
 
       <div class="container">
-
         <div class="row gy-4">
 
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article>
               <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="Tecnología con propósito" class="img-fluid">
+                <img src="assets/img/blog/blog-1.jpg" alt="Tecnología con propósito" class="img-fluid" loading="lazy" decoding="async">
               </div>
               <p class="post-category">Enfoque</p>
               <h2 class="title">
@@ -801,7 +728,7 @@
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <article>
               <div class="post-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="Crecimiento empresarial" class="img-fluid">
+                <img src="assets/img/blog/blog-2.jpg" alt="Crecimiento empresarial" class="img-fluid" loading="lazy" decoding="async">
               </div>
               <p class="post-category">Crecimiento</p>
               <h2 class="title">
@@ -816,7 +743,7 @@
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <article>
               <div class="post-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="Confianza y acompañamiento" class="img-fluid">
+                <img src="assets/img/blog/blog-3.jpg" alt="Confianza y acompañamiento" class="img-fluid" loading="lazy" decoding="async">
               </div>
               <p class="post-category">Confianza</p>
               <h2 class="title">
@@ -829,24 +756,20 @@
           </div>
 
         </div>
-
       </div>
-
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
-
       <div class="container section-title text-center" data-aos="fade-up">
         <h2>Hablemos de tu negocio</h2>
         <p class="mx-auto" style="max-width: 760px;">
-          Si estás buscando una solución que te ayude a organizar mejor tu operación, mejorar tu presencia digital
-          o crecer con apoyo de la tecnología, conversemos.
+          Si estás buscando una solución que te ayude a organizar mejor tu operación, mejorar tu presencia digital o
+          crecer con apoyo de la tecnología, conversemos.
         </p>
       </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
-
         <div class="row gy-4">
 
           <div class="col-lg-4">
@@ -862,7 +785,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Contacto</h3>
-                <p>+52(33)12306526</p>
+                <p>+52 (33) 1230 6526</p>
               </div>
             </div>
 
@@ -876,47 +799,38 @@
           </div>
 
           <div class="col-lg-8">
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <input type="hidden" name="access_key" value="9903f13e-43e6-4d8c-926d-4aa6fb3378fd">
               <input type="hidden" name="subject" value="Nuevo contacto desde Listo En Línea">
               <input type="hidden" name="from_name" value="Listo En Línea">
-              <input type="hidden" name="ccemail" value="vladiir.rod96@gmail.com, juanheuforico@gmail.com">
+              <input type="hidden" name="ccemail" value="vladiir.rod96@gmail.com,juanheuforico@gmail.com">
 
               <div class="row gy-4 gx-2">
-
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Tu nombre" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Tu nombre" required>
                 </div>
 
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Tu correo" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Tu correo" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="asunto_empresa" placeholder="Nombre de tu empresa o asunto"
-                    required="">
+                  <input type="text" class="form-control" name="asunto_empresa" placeholder="Nombre de tu empresa o asunto" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6"
-                    placeholder="Cuéntanos qué problema quieres resolver o qué tipo de solución necesitas"
-                    required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Cuéntanos qué problema quieres resolver o qué tipo de solución necesitas" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
                   <button type="submit">Solicitar asesoría</button>
                 </div>
-
               </div>
             </form>
           </div>
 
         </div>
-
       </div>
-
     </section>
 
   </main>
@@ -925,7 +839,7 @@
     <div class="container footer-container text-center">
 
       <div class="footer-logo-wrapper">
-        <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="footer-logo">
+        <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="footer-logo" loading="lazy" decoding="async">
       </div>
 
       <p class="footer-description">
@@ -933,10 +847,10 @@
       </p>
 
       <div class="social-links d-flex justify-content-center">
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
-        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
       </div>
 
       <div class="footer-bottom">
@@ -955,7 +869,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
@@ -963,17 +877,11 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!--<script src="assets/vendor/php-email-form/validate.js"></script>-->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
 </body>
 
