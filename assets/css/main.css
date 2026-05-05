@@ -3267,17 +3267,19 @@ article,
     font-size: 15px;
   }
 }
-.mobile-nav-active .navmenu {
-  z-index: 9999 !important;
-}
+@media (max-width: 1199px) {
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999 !important;
+  }
 
-.mobile-nav-active .navmenu ul {
-  display: block !important;
-  position: relative;
-  z-index: 10000;
-}
-.mobile-nav-active .navmenu {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  .mobile-nav-active .navmenu > ul {
+    display: block !important;
+    position: absolute;
+    inset: 70px 16px 20px 16px;
+    z-index: 10000;
+    background: #ffffff;
+  }
 }
