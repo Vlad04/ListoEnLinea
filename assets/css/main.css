@@ -3370,3 +3370,11 @@ article,
     color: #000000 !important;
   }
 }
+@media (max-width: 1199px) {
+
+  body.mobile-nav-active #navmenu > ul > li > a {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  }
+
+}
