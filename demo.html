@@ -864,7 +864,13 @@
       function toNumber(value) {
         if (typeof value === 'number') return value;
         if (value === null || value === undefined) return 0;
-        return Number(String(value).replace(/[$,\s]/g, '')) || 0;
+
+        return Number(
+          String(value)
+            .replace(/\$/g, '')
+            .replace(/,/g, '')
+            .replace(/\s/g, '')
+        ) || 0;
       }
 
       function renderTable(tableId, rows, columns) {
@@ -939,10 +945,26 @@
           }
         });
       }
+      function formatExcelDateToMonth(value) {
+        if (!value) return '';
 
+        if (typeof value === 'number') {
+          const date = XLSX.SSF.parse_date_code(value);
+          if (!date) return '';
+
+          const months = [
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+          ];
+        
+          return months[date.m - 1] || '';
+        }
+
+        return value;
+      }
       function updateSales(rows) {
         const data = rows.map(row => ({
-          Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo', 'Fecha']) || 'Sin mes',
+          Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo']) || formatExcelDateToMonth(normalizeKey(row, ['Fecha'])) || 'Sin mes',
           Producto: normalizeKey(row, ['Producto', 'Product', 'Modelo', 'Articulo', 'Artículo']) || 'Sin producto',
           Ventas: toNumber(normalizeKey(row, ['Ventas', 'Venta', 'Importe', 'Monto', 'Revenue'])),
           Inventario: toNumber(normalizeKey(row, ['Inventario', 'Stock', 'Existencia', 'Piezas']))
@@ -1002,7 +1024,7 @@
 
       function updateForecast(rows) {
         const normalized = rows.map(row => ({
-          Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo', 'Fecha']) || 'Sin mes',
+          Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo']) || formatExcelDateToMonth(normalizeKey(row, ['Fecha'])) || 'Sin mes',
           Producto: normalizeKey(row, ['Producto', 'Product', 'Modelo', 'Articulo', 'Artículo']) || 'Sin producto',
           Ventas: toNumber(normalizeKey(row, ['Ventas', 'Venta', 'Piezas', 'Demanda', 'Unidades'])),
           Inventario: toNumber(normalizeKey(row, ['Inventario', 'Stock', 'Existencia']))
@@ -1060,7 +1082,10 @@
         const buffer = await file.arrayBuffer();
         const workbook = XLSX.read(buffer, { type: 'array' });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
-        return XLSX.utils.sheet_to_json(sheet, { defval: '' });
+        return XLSX.utils.sheet_to_json(sheet, {
+          range: 1,
+          defval: ''
+        });
       }
 
       function extractXmlValue(text, patterns) {
