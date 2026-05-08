@@ -931,6 +931,24 @@ document.addEventListener("DOMContentLoaded", () => {
         : "/demo/";
   }
 
+  // Scroll desde demo sin hashes
+  const section = sessionStorage.getItem("scrollToSection");
+
+  if (section) {
+    sessionStorage.removeItem("scrollToSection");
+
+    const target = document.getElementById(section);
+
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 250);
+    }
+  }
+
 });
 </script>
 

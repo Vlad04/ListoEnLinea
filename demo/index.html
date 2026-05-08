@@ -492,7 +492,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="cta-btn" href="../index.html#contact">Contáctanos</a>
+      <a class="cta-btn" href="/" data-home-scroll="contact">Contáctanos</a>
     </div>
   </header>
 
@@ -512,7 +512,7 @@
             </p>
             <div class="hero-actions">
               <a href="#demo-ventas" class="btn-lel-primary">Explorar demos</a>
-              <a href="../index.html#contact" class="btn-lel-outline">Solicitar demo personalizada</a>
+              <a href="/" data-home-scroll="contact" class="btn-lel-outline">Solicitar demo personalizada</a>
             </div>
           </div>
 
@@ -834,7 +834,7 @@
               </p>
             </div>
             <div class="col-lg-4 text-lg-end">
-              <a href="../index.html#contact" class="btn-lel-primary d-inline-block">Solicitar asesoría</a>
+              <a href="/" data-home-scroll="contact" class="btn-lel-primary d-inline-block">Solicitar asesoría</a>
             </div>
           </div>
         </div>
@@ -1582,22 +1582,20 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("[data-home-scroll]").forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
 
-    document.querySelectorAll("[data-home-scroll]").forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
+          const section = link.getAttribute("data-home-scroll");
+          sessionStorage.setItem("scrollToSection", section);
 
-        const section = link.getAttribute("data-home-scroll");
-
-        if (window.location.protocol === "file:") {
-          window.location.href = `../index.html#${section}`;
-        } else {
-          window.location.href = `/#${section}`;
-        }
+          window.location.href =
+            window.location.protocol === "file:"
+              ? "../index.html"
+              : "/";
+        });
       });
     });
-
-  });
   </script>
 
 </body>
