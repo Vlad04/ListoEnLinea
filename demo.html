@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo | Listo En Línea</title>
-    <meta name="description" content="Demos interactivas de soluciones digitales para negocios: análisis de ventas, facturas e inventario.">
-    <meta name="keywords" content="demo software, dashboards, análisis de ventas, facturas, forecast, inventario, soluciones digitales">
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icono/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icono/favicon-16x16.png">
-    <link rel="shortcut icon" href="assets/img/icono/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icono/apple-touch-icon.png">
-    <link rel="manifest" href="assets/img/icono/site.webmanifest">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <style>
-      :root {
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo | Listo En Línea</title>
+  <meta name="description"
+    content="Demos interactivas de soluciones digitales para negocios: análisis de ventas, facturas e inventario.">
+  <meta name="keywords"
+    content="demo software, dashboards, análisis de ventas, facturas, forecast, inventario, soluciones digitales">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icono/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icono/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/img/icono/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icono/apple-touch-icon.png">
+  <link rel="manifest" href="assets/img/icono/site.webmanifest">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    :root {
       --lel-primary: #0F97BA;
       --lel-primary-dark: #07677f;
       --lel-navy: #071b2c;
@@ -33,12 +38,14 @@
       --lel-muted: #637381;
       --lel-border: rgba(15, 151, 186, 0.16);
       --lel-shadow: 0 24px 70px rgba(7, 27, 44, 0.12);
-      }
-      body.demo-page {
+    }
+
+    body.demo-page {
       background: var(--lel-bg);
       color: #24313d;
-      }
-      .demo-hero {
+    }
+
+    .demo-hero {
       min-height: 78vh;
       display: flex;
       align-items: center;
@@ -46,205 +53,236 @@
       overflow: hidden;
       padding: 150px 0 90px;
       background:
-      radial-gradient(circle at 12% 18%, rgba(15, 151, 186, 0.34), transparent 28%),
-      radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.16), transparent 24%),
-      linear-gradient(135deg, #061625 0%, #0b2a42 42%, #0F97BA 135%);
+        radial-gradient(circle at 12% 18%, rgba(15, 151, 186, 0.34), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.16), transparent 24%),
+        linear-gradient(135deg, #061625 0%, #0b2a42 42%, #0F97BA 135%);
       color: #ffffff;
-      }
-      .demo-hero::before {
+    }
+
+    .demo-hero::before {
       content: "";
       position: absolute;
       inset: 0;
       background-image:
-      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
       background-size: 42px 42px;
       mask-image: linear-gradient(to bottom, black, transparent 95%);
-      }
-      .demo-hero .container {
+    }
+
+    .demo-hero .container {
       position: relative;
       z-index: 2;
-      }
-      .demo-eyebrow {
+    }
+
+    .demo-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 9px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       font-weight: 600;
       font-size: 14px;
       margin-bottom: 18px;
       backdrop-filter: blur(12px);
-      }
-      .demo-hero h1 {
+    }
+
+    .demo-hero h1 {
       font-family: Raleway, sans-serif;
       font-size: clamp(2.35rem, 6vw, 5.15rem);
       font-weight: 800;
       line-height: 0.96;
       letter-spacing: -0.05em;
       margin-bottom: 22px;
-      }
-      .demo-hero p {
+    }
+
+    .demo-hero p {
       font-size: 1.12rem;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255, 255, 255, 0.82);
       max-width: 760px;
       margin-bottom: 28px;
-      }
-      .hero-actions {
+    }
+
+    .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      }
-      .btn-lel-primary,
-      .btn-lel-outline,
-      .btn-lel-dark {
+    }
+
+    .btn-lel-primary,
+    .btn-lel-outline,
+    .btn-lel-dark {
       border-radius: 999px;
       padding: 12px 22px;
       font-weight: 700;
       transition: all .22s ease;
       text-decoration: none;
-      }
-      .btn-lel-primary {
+    }
+
+    .btn-lel-primary {
       background: var(--lel-primary);
       color: #fff;
       border: 1px solid var(--lel-primary);
-      box-shadow: 0 16px 30px rgba(15,151,186,.28);
-      }
-      .btn-lel-primary:hover {
+      box-shadow: 0 16px 30px rgba(15, 151, 186, .28);
+    }
+
+    .btn-lel-primary:hover {
       background: #12a9cf;
       color: #fff;
       transform: translateY(-2px);
-      }
-      .btn-lel-outline {
-      background: rgba(255,255,255,.09);
+    }
+
+    .btn-lel-outline {
+      background: rgba(255, 255, 255, .09);
       color: #fff;
-      border: 1px solid rgba(255,255,255,.32);
-      }
-      .btn-lel-outline:hover {
+      border: 1px solid rgba(255, 255, 255, .32);
+    }
+
+    .btn-lel-outline:hover {
       background: #fff;
       color: var(--lel-navy);
       transform: translateY(-2px);
-      }
-      .btn-lel-dark {
+    }
+
+    .btn-lel-dark {
       background: var(--lel-navy);
       color: #fff;
       border: 1px solid var(--lel-navy);
-      }
-      .btn-lel-dark:hover {
+    }
+
+    .btn-lel-dark:hover {
       background: var(--lel-primary-dark);
       border-color: var(--lel-primary-dark);
       color: #fff;
       transform: translateY(-2px);
-      }
-      .hero-dashboard-card {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .hero-dashboard-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 34px;
       padding: 22px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.22);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
       backdrop-filter: blur(20px);
-      }
-      .hero-mini-card {
-      background: rgba(255,255,255,0.92);
+    }
+
+    .hero-mini-card {
+      background: rgba(255, 255, 255, 0.92);
       color: var(--lel-navy);
       border-radius: 24px;
       padding: 18px;
       margin-bottom: 14px;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.12);
-      }
-      .hero-mini-card small {
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero-mini-card small {
       color: var(--lel-muted);
       font-weight: 700;
-      }
-      .hero-metric {
+    }
+
+    .hero-metric {
       font-size: 1.9rem;
       font-weight: 800;
       letter-spacing: -.04em;
       margin: 4px 0 0;
-      }
-      .demo-section {
+    }
+
+    .demo-section {
       padding: 90px 0;
-      }
-      .demo-section-title h2 {
+    }
+
+    .demo-section-title h2 {
       font-family: Raleway, sans-serif;
       font-weight: 800;
       font-size: clamp(2rem, 4vw, 3.1rem);
       color: var(--lel-navy);
       letter-spacing: -.04em;
-      }
-      .demo-section-title p {
+    }
+
+    .demo-section-title p {
       color: var(--lel-muted);
       max-width: 760px;
       margin-inline: auto;
-      }
-      .demo-card {
+    }
+
+    .demo-card {
       background: var(--lel-card);
       border: 1px solid var(--lel-border);
       border-radius: 30px;
       box-shadow: var(--lel-shadow);
       overflow: hidden;
       height: 100%;
-      }
-      .demo-card-header {
+    }
+
+    .demo-card-header {
       padding: 28px;
       background:
-      radial-gradient(circle at 18% 10%, rgba(15,151,186,.24), transparent 30%),
-      linear-gradient(135deg, #ffffff 0%, #f3fbfd 100%);
+        radial-gradient(circle at 18% 10%, rgba(15, 151, 186, .24), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f3fbfd 100%);
       border-bottom: 1px solid var(--lel-border);
-      }
-      .demo-icon {
+    }
+
+    .demo-icon {
       width: 58px;
       height: 58px;
       border-radius: 20px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(15,151,186,.12);
+      background: rgba(15, 151, 186, .12);
       color: var(--lel-primary);
       font-size: 28px;
       margin-bottom: 16px;
-      }
-      .demo-card h3 {
+    }
+
+    .demo-card h3 {
       font-size: 1.35rem;
       font-weight: 800;
       color: var(--lel-navy);
       margin-bottom: 10px;
-      }
-      .demo-card p {
+    }
+
+    .demo-card p {
       color: var(--lel-muted);
       margin-bottom: 0;
-      }
-      .demo-card-body {
+    }
+
+    .demo-card-body {
       padding: 24px;
-      }
-      .demo-upload-box {
-      border: 1.5px dashed rgba(15,151,186,.38);
+    }
+
+    .demo-upload-box {
+      border: 1.5px dashed rgba(15, 151, 186, .38);
       border-radius: 22px;
       background: #f8fdfe;
       padding: 18px;
       margin: 16px 0 20px;
-      }
-      .demo-upload-box label {
+    }
+
+    .demo-upload-box label {
       font-weight: 800;
       color: var(--lel-navy);
       margin-bottom: 8px;
-      }
-      .kpi-grid {
+    }
+
+    .kpi-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin-bottom: 18px;
-      }
-      .kpi-card {
-      border: 1px solid rgba(15,151,186,.12);
+    }
+
+    .kpi-card {
+      border: 1px solid rgba(15, 151, 186, .12);
       background: #ffffff;
       border-radius: 18px;
       padding: 14px;
       min-height: 92px;
-      }
-      .kpi-card span {
+    }
+
+    .kpi-card span {
       display: block;
       color: var(--lel-muted);
       font-size: 12px;
@@ -252,70 +290,82 @@
       text-transform: uppercase;
       letter-spacing: .04em;
       margin-bottom: 6px;
-      }
-      .kpi-card strong {
+    }
+
+    .kpi-card strong {
       display: block;
       color: var(--lel-navy);
       font-size: 1.1rem;
       line-height: 1.1;
-      }
-      .result-panel {
-      border: 1px solid rgba(15,151,186,.14);
+    }
+
+    .result-panel {
+      border: 1px solid rgba(15, 151, 186, .14);
       border-radius: 22px;
       overflow: hidden;
       background: #fff;
-      }
-      .result-panel-title {
+    }
+
+    .result-panel-title {
       padding: 14px 16px;
       background: #f5fbfd;
-      border-bottom: 1px solid rgba(15,151,186,.12);
+      border-bottom: 1px solid rgba(15, 151, 186, .12);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      }
-      .result-panel-title h6 {
+    }
+
+    .result-panel-title h6 {
       margin: 0;
       font-weight: 800;
       color: var(--lel-navy);
-      }
-      .result-panel-title small {
+    }
+
+    .result-panel-title small {
       color: var(--lel-muted);
       font-weight: 600;
-      }
-      .table-wrap {
+    }
+
+    .table-wrap {
       max-height: 250px;
       overflow: auto;
-      }
-      .table-wrap table {
+    }
+
+    .table-wrap table {
       margin-bottom: 0;
       font-size: 13px;
-      }
-      .table-wrap thead th {
+    }
+
+    .table-wrap thead th {
       position: sticky;
       top: 0;
       background: #eef8fb;
       color: var(--lel-navy);
       z-index: 2;
       white-space: nowrap;
-      }
-      .chart-box {
+    }
+
+    .chart-box {
       height: 260px;
       padding: 16px;
-      }
-      .demo-note {
+    }
+
+    .demo-note {
       font-size: 13px;
       color: var(--lel-muted);
       margin-top: 12px;
-      }
-      .demo-tabs {
+    }
+
+    .demo-tabs {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
       margin: 34px 0 10px;
-      }
-      .demo-tabs a {
+    }
+
+    .demo-tabs a {
       padding: 10px 16px;
       border-radius: 999px;
       color: var(--lel-navy);
@@ -323,46 +373,52 @@
       border: 1px solid var(--lel-border);
       font-weight: 800;
       text-decoration: none;
-      box-shadow: 0 8px 22px rgba(7,27,44,.06);
-      }
-      .demo-tabs a:hover {
+      box-shadow: 0 8px 22px rgba(7, 27, 44, .06);
+    }
+
+    .demo-tabs a:hover {
       color: #fff;
       background: var(--lel-primary);
       border-color: var(--lel-primary);
-      }
-      .cta-demo {
+    }
+
+    .cta-demo {
       background:
-      radial-gradient(circle at 20% 20%, rgba(15,151,186,.35), transparent 30%),
-      linear-gradient(135deg, #071b2c, #0b2940);
+        radial-gradient(circle at 20% 20%, rgba(15, 151, 186, .35), transparent 30%),
+        linear-gradient(135deg, #071b2c, #0b2940);
       border-radius: 34px;
       color: #fff;
       padding: 42px;
       box-shadow: var(--lel-shadow);
-      }
-      .cta-demo h2 {
+    }
+
+    .cta-demo h2 {
       font-weight: 800;
       letter-spacing: -.03em;
       margin-bottom: 12px;
-      }
-      .cta-demo p {
-      color: rgba(255,255,255,.78);
+    }
+
+    .cta-demo p {
+      color: rgba(255, 255, 255, .78);
       margin-bottom: 0;
-      }
-      .alert-soft {
-      background: rgba(15,151,186,.08);
-      border: 1px solid rgba(15,151,186,.18);
+    }
+
+    .alert-soft {
+      background: rgba(15, 151, 186, .08);
+      border: 1px solid rgba(15, 151, 186, .18);
       color: var(--lel-navy);
       border-radius: 18px;
       padding: 14px 16px;
       font-size: 14px;
       margin-bottom: 18px;
-      }
-      .editable-hint {
+    }
+
+    .editable-hint {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(15,151,186,.10);
-      border: 1px solid rgba(15,151,186,.22);
+      background: rgba(15, 151, 186, .10);
+      border: 1px solid rgba(15, 151, 186, .22);
       color: var(--lel-navy);
       border-radius: 999px;
       padding: 8px 12px;
@@ -370,499 +426,517 @@
       font-weight: 800;
       margin-bottom: 14px;
       user-select: none;
-      }
-      .table-wrap td[contenteditable="true"] {
+    }
+
+    .table-wrap td[contenteditable="true"] {
       cursor: text;
       background: linear-gradient(180deg, #ffffff 0%, #faffff 100%);
       transition: all .18s ease;
-      }
-      .table-wrap td[contenteditable="true"]:hover {
+    }
+
+    .table-wrap td[contenteditable="true"]:hover {
       background: #eefaff;
-      box-shadow: inset 0 0 0 1px rgba(15,151,186,.28);
-      }
-      .table-wrap td[contenteditable="true"]:focus {
+      box-shadow: inset 0 0 0 1px rgba(15, 151, 186, .28);
+    }
+
+    .table-wrap td[contenteditable="true"]:focus {
       outline: none;
       background: #e8f9ff;
       box-shadow: inset 0 0 0 2px var(--lel-primary);
-      }
-      .table-wrap td[contenteditable="true"]::selection {
-      background: rgba(15,151,186,.25);
-      }
-      @media (max-width: 991px) {
+    }
+
+    .table-wrap td[contenteditable="true"]::selection {
+      background: rgba(15, 151, 186, .25);
+    }
+
+    @media (max-width: 991px) {
       .demo-hero {
-      min-height: auto;
-      padding-top: 130px;
+        min-height: auto;
+        padding-top: 130px;
       }
+
       .hero-dashboard-card {
-      margin-top: 30px;
+        margin-top: 30px;
       }
+
       .kpi-grid {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
       }
-      }
-    </style>
-  </head>
-  <body class="demo-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <h1 class="sitename">
-            <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="logo" width="180" height="60">
-          </h1>
-        </a>
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html#hero">Inicio</a></li>
-            <li><a href="index.html#mission-vision">Nosotros</a></li>
-            <li><a href="index.html#services">Servicios</a></li>
-            <li><a href="index.html#portfolio">Portafolio</a></li>
-            <li><a href="demo.html" class="active">Demo</a></li>
-            <li><a href="index.html#pricing">Precios</a></li>
-            <li><a href="index.html#contact">Contacto</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-        <a class="cta-btn" href="index.html#contact">Contáctanos</a>
-      </div>
-    </header>
-    <main class="main">
-      <section class="demo-hero">
-        <div class="container">
-          <div class="row align-items-center gy-5">
-            <div class="col-lg-7" data-aos="fade-up">
-              <div style="pointer-events: none;" class="demo-eyebrow">
-                <i class="bi bi-stars"></i>
-                Laboratorio interactivo
-              </div>
-              <h1 style="color: #F4FBFF;">Prueba soluciones reales antes de imaginarlas</h1>
-              <p>
-                Descarga archivos de ejemplo, modifica los datos y vuelve a cargarlos para ver tablas, métricas y gráficas
-                actualizadas en tiempo real. Todo funciona desde tu navegador.
-              </p>
-              <div class="hero-actions">
-                <a href="#demo-ventas" class="btn-lel-primary">Explorar demos</a>
-                <a href="index.html#contact" class="btn-lel-outline">Solicitar demo personalizada</a>
-              </div>
+    }
+  </style>
+</head>
+
+<body class="demo-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">
+          <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="logo" width="180" height="60">
+        </h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Inicio</a></li>
+          <li><a href="index.html#mission-vision">Nosotros</a></li>
+          <li><a href="index.html#services">Servicios</a></li>
+          <li><a href="index.html#portfolio">Portafolio</a></li>
+          <li><a href="demo.html" class="active">Demo</a></li>
+          <li><a href="index.html#pricing">Precios</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="cta-btn" href="index.html#contact">Contáctanos</a>
+    </div>
+  </header>
+  <main class="main">
+    <section class="demo-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7" data-aos="fade-up">
+            <div style="pointer-events: none;" class="demo-eyebrow">
+              <i class="bi bi-stars"></i>
+              Laboratorio interactivo
             </div>
-            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
-              <div class="hero-dashboard-card">
-                <div class="hero-mini-card">
-                  <small>Ventas analizadas</small>
-                  <div class="hero-metric" id="heroMetricSales">$0</div>
-                </div>
-                <div class="hero-mini-card">
-                  <small>Inventario sugerido</small>
-                  <div class="hero-metric" id="heroMetricInventory">0 pzas</div>
-                </div>
-                <div class="hero-mini-card mb-0">
-                  <small>Facturas revisadas</small>
-                  <div class="hero-metric" id="heroMetricInvoices">0</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="demo-section">
-        <div class="container">
-          <div class="demo-section-title text-center" data-aos="fade-up">
-            <h2>Demos listas para probar</h2>
+            <h1 style="color: #F4FBFF;">Prueba soluciones reales antes de imaginarlas</h1>
             <p>
-              Cada demo incluye archivo descargable, carga de archivo, tabla visual y gráfica. Puedes modificar el template en Excel
-              o editar las celdas directamente en la tabla para ver cómo las métricas y gráficas se actualizan en tiempo real.
+              Descarga archivos de ejemplo, modifica los datos y vuelve a cargarlos para ver tablas, métricas y gráficas
+              actualizadas en tiempo real. Todo funciona desde tu navegador.
             </p>
-          </div>
-          <div class="demo-tabs" data-aos="fade-up" data-aos-delay="100">
-            <a href="#demo-ventas"><i class="bi bi-bar-chart-line me-1"></i> Ventas</a>
-            <a href="#demo-facturas"><i class="bi bi-receipt me-1"></i> Facturas</a>
-            <a href="#demo-forecast"><i class="bi bi-graph-up-arrow me-1"></i> Forecast</a>
-          </div>
-        </div>
-      </section>
-      <section id="demo-ventas" class="demo-section pt-0">
-        <div class="container">
-          <div class="demo-card" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-lg-4">
-                <div class="demo-card-header h-100">
-                  <div class="demo-icon"><i class="bi bi-bar-chart-line"></i></div>
-                  <h3>Analizador de ventas</h3>
-                  <p>
-                    Carga un Excel o CSV con ventas por mes, producto e inventario. La demo calcula totales y genera una
-                    gráfica de ventas por periodo.
-                  </p>
-                  <div class="mt-4 d-grid gap-2">
-                    <a href="assets/demo/reporte_ventas_demo.xlsx" class="btn-lel-dark text-center" download>
-                    <i class="bi bi-download me-1"></i> Descargar template
-                    </a>
-                  </div>
-                  <div class="demo-upload-box">
-                    <label for="salesFile" class="form-label">Subir archivo actualizado</label>
-                    <input id="salesFile" type="file" class="form-control" accept=".xlsx,.xls,.csv">
-                    <div class="demo-note">Columnas sugeridas: Mes, Producto, Ventas, Inventario.</div>
-                  </div>
-                  <div class="alert-soft">
-                    <strong>Tip:</strong> cambia los datos del template, guárdalo y súbelo aquí. La tabla y gráfica se
-                    recalculan automáticamente.
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="demo-card-body">
-                  <div class="kpi-grid">
-                    <div class="kpi-card">
-                      <span>Total ventas</span>
-                      <strong id="salesTotal">$0</strong>
-                    </div>
-                    <div class="kpi-card">
-                      <span>Productos</span>
-                      <strong id="salesProducts">0</strong>
-                    </div>
-                    <div class="kpi-card">
-                      <span>Inventario</span>
-                      <strong id="salesInventory">0 pzas</strong>
-                    </div>
-                  </div>
-                  <div class="editable-hint">
-                    <i class="bi bi-pencil-square"></i>
-                    Puedes editar las celdas de esta tabla y la gráfica se actualizará automáticamente.
-                  </div>
-                  <div class="result-panel mb-4">
-                    <div class="result-panel-title">
-                      <h6>Tabla de ventas</h6>
-                      <div class="d-flex align-items-center gap-2">
-                        <small id="salesRows">Datos de ejemplo</small>
-                        <button type="button" class="btn btn-sm btn-outline-primary"
-                          onclick="downloadExcelReport('reporte_ventas_demo.xlsx', window.currentSalesRows, 'Ventas')">
-                        <i class="bi bi-download"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="table-wrap">
-                      <table class="table table-hover table-bordered" id="salesTable"></table>
-                    </div>
-                  </div>
-                  <div class="result-panel">
-                    <div class="result-panel-title">
-                      <h6>Gráfica de ventas por mes</h6>
-                      <small>Actualización automática</small>
-                    </div>
-                    <div class="chart-box">
-                      <canvas id="salesChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="hero-actions">
+              <a href="#demo-ventas" class="btn-lel-primary">Explorar demos</a>
+              <a href="index.html#contact" class="btn-lel-outline">Solicitar demo personalizada</a>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="demo-facturas" class="demo-section pt-0">
-        <div class="container">
-          <div class="demo-card" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-lg-4">
-                <div class="demo-card-header h-100">
-                  <div class="demo-icon"><i class="bi bi-receipt"></i></div>
-                  <h3>Clasificador de facturas</h3>
-                  <p>
-                    Carga un ZIP o varios XML dummy. La demo extrae proveedor, monto y clasifica gastos deducibles o no
-                    deducibles con reglas simples de ejemplo.
-                  </p>
-                  <div class="mt-4 d-grid gap-2">
-                    <a href="assets/demo/facturas_dummy.zip" class="btn-lel-dark text-center" download>
-                    <i class="bi bi-download me-1"></i> Descargar ZIP demo
-                    </a>
-                  </div>
-                  <div class="demo-upload-box">
-                    <label for="invoiceFile" class="form-label">Subir ZIP o XML</label>
-                    <input id="invoiceFile" type="file" class="form-control" accept=".zip,.xml,.txt" multiple>
-                    <div class="demo-note">Funciona con XML dummy o archivos de texto con datos simulados.</div>
-                  </div>
-                  <div class="alert-soft">
-                    <strong>Regla demo:</strong>
-                    el campo Concepto funciona como un catálogo de ejemplo. Conceptos como “Papelería y oficina”,
-                    “Software administrativo”, “Equipo de cómputo”, “Publicidad digital” e “Internet empresarial”
-                    se clasifican como deducibles. Conceptos como “Consumo personal”, “Entretenimiento”,
-                    “Regalo” o “Sin comprobante” se clasifican como no deducibles.
-                  </div>
-                </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+            <div class="hero-dashboard-card">
+              <div class="hero-mini-card">
+                <small>Ventas analizadas</small>
+                <div class="hero-metric" id="heroMetricSales">$0</div>
               </div>
-              <div class="col-lg-8">
-                <div class="demo-card-body">
-                  <div class="kpi-grid">
-                    <div class="kpi-card">
-                      <span>Total facturas</span>
-                      <strong id="invoiceCount">0</strong>
-                    </div>
-                    <div class="kpi-card">
-                      <span>Deducible</span>
-                      <strong id="invoiceDeductible">$0</strong>
-                    </div>
-                    <div class="kpi-card">
-                      <span>No deducible</span>
-                      <strong id="invoiceNonDeductible">$0</strong>
-                    </div>
-                  </div>
-                  <div class="editable-hint">
-                    <i class="bi bi-pencil-square"></i>
-                    Puedes editar las celdas de esta tabla y la gráfica se actualizará automáticamente.
-                  </div>
-                  <div class="result-panel mb-4">
-                    <div class="result-panel-title">
-                      <h6>Tabla de facturas</h6>
-                      <div class="d-flex align-items-center gap-2">
-                        <small id="invoiceRows">Datos de ejemplo</small>
-                        <button type="button" class="btn btn-sm btn-outline-primary"
-                          onclick="downloadExcelReport('reporte_facturas_demo.xlsx', window.currentInvoiceRows, 'Facturas')">
-                        <i class="bi bi-download"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="table-wrap">
-                      <table class="table table-hover table-bordered" id="invoiceTable"></table>
-                    </div>
-                  </div>
-                  <div class="result-panel">
-                    <div class="result-panel-title">
-                      <h6>Clasificación por monto</h6>
-                      <small>Deducible vs no deducible</small>
-                    </div>
-                    <div class="chart-box">
-                      <canvas id="invoiceChart"></canvas>
-                    </div>
-                  </div>
-                </div>
+              <div class="hero-mini-card">
+                <small>Inventario sugerido</small>
+                <div class="hero-metric" id="heroMetricInventory">0 pzas</div>
+              </div>
+              <div class="hero-mini-card mb-0">
+                <small>Facturas revisadas</small>
+                <div class="hero-metric" id="heroMetricInvoices">0</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="demo-forecast" class="demo-section pt-0">
-        <div class="container">
-          <div class="demo-card" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-lg-4">
-                <div class="demo-card-header h-100">
-                  <div class="demo-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                  <h3>Forecast de inventario</h3>
-                  <p>
-                    Carga ventas históricas y obtén una estimación simple de demanda mensual e inventario sugerido por
-                    producto.
-                  </p>
-                  <div class="mt-4 d-grid gap-2">
-                    <a href="assets/demo/forecast_inventario_demo.xlsx" class="btn-lel-dark text-center" download>
-                    <i class="bi bi-download me-1"></i> Descargar template
-                    </a>
-                  </div>
-                  <div class="demo-upload-box">
-                    <label for="forecastFile" class="form-label">Subir archivo actualizado</label>
-                    <input id="forecastFile" type="file" class="form-control" accept=".xlsx,.xls,.csv">
-                    <div class="demo-note">Columnas sugeridas: Mes, Producto, Ventas, Inventario.</div>
-                    <div class="alert-soft mt-3">
-                      <strong>Cómo funciona:</strong>
-                      esta demo calcula automáticamente un inventario objetivo usando la demanda estimada + 25% de colchón de
-                      seguridad.
-                      Si el inventario actual es menor al objetivo, el sistema calcula automáticamente la compra sugerida.
-                    </div>
-                  </div>
-                  <div class="alert-soft">
-                    <strong>Regla demo:</strong> se usa promedio mensual por producto + 25% de colchón de seguridad.
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="demo-card-body">
-                  <div class="kpi-grid">
-                    <div class="kpi-card">
-                      <span>Demanda estimada</span>
-                      <strong id="forecastDemand">0 pzas</strong>
-                    </div>
-                    <div class="kpi-card">
-                      <span>Inventario sugerido</span>
-                      <strong id="forecastInventory">0 pzas</strong>
-                    </div>
-                    <div class="kpi-card">
-                      <span>Productos analizados</span>
-                      <strong id="forecastProducts">0</strong>
-                    </div>
-                  </div>
-                  <div class="editable-hint">
-                    <i class="bi bi-pencil-square"></i>
-                    Puedes editar las celdas de esta tabla y la gráfica se actualizará automáticamente.
-                  </div>
-                  <div class="result-panel mb-4">
-                    <div class="result-panel-title">
-                      <h6>Tabla de forecast</h6>
-                      <div class="d-flex align-items-center gap-2">
-                        <small id="forecastRows">Datos de ejemplo</small>
-                        <button type="button" class="btn btn-sm btn-outline-primary"
-                          onclick="downloadExcelReport('reporte_forecast_demo.xlsx', window.currentForecastRows, 'Forecast')">
-                        <i class="bi bi-download"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="table-wrap">
-                      <table class="table table-hover table-bordered" id="forecastTable"></table>
-                    </div>
-                  </div>
-                  <div class="result-panel">
-                    <div class="result-panel-title">
-                      <h6>Inventario sugerido por producto</h6>
-                      <small>Estimación simple</small>
-                    </div>
-                    <div class="chart-box">
-                      <canvas id="forecastChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="demo-section pt-0">
-        <div class="container">
-          <div class="cta-demo" data-aos="zoom-in">
-            <div class="row align-items-center gy-4">
-              <div class="col-lg-8">
-                <h2 style="color: #F4FBFF;">¿Quieres una demo conectada a tus datos reales?</h2>
-                <p>
-                  Podemos adaptar estas ideas a tu operación: ventas, inventario, facturación, reportes, automatizaciones,
-                  dashboards o sistemas internos.
-                </p>
-              </div>
-              <div class="col-lg-4 text-lg-end">
-                <a href="index.html#contact" class="btn-lel-primary d-inline-block">Solicitar asesoría</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="footer" class="footer dark-background">
-      <div class="container footer-container text-center">
-        <div class="footer-logo-wrapper">
-          <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="footer-logo" loading="lazy" decoding="async">
-        </div>
-        <p class="footer-description">
-          Desarrollamos soluciones digitales para negocios que buscan crecer, optimizarse y avanzar con confianza.
-        </p>
-        <div class="social-links d-flex justify-content-center">
-          <a href="https://www.facebook.com/profile.php?id=61589022853078" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/listoenlinea.soluciones/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.tiktok.com/@listoenlinea.soluciones" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-          <a href="https://wa.me/523312306526" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        </div>
-        <div class="footer-bottom">
-          <div class="copyright">
-            <span>Copyright</span>
-            <strong class="px-1 sitename">Listo en Línea</strong>
-            <span>All Rights Reserved</span>
-          </div>
-          <div class="credits">
-            Hecho con enfoque en tecnología, crecimiento y soluciones reales para empresas mexicanas.
           </div>
         </div>
       </div>
-    </footer>
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
+    </section>
+    <section class="demo-section">
+      <div class="container">
+        <div class="demo-section-title text-center" data-aos="fade-up">
+          <h2>Demos listas para probar</h2>
+          <p>
+            Cada demo incluye archivo descargable, carga de archivo, tabla visual y gráfica. Puedes modificar el
+            template en Excel
+            o editar las celdas directamente en la tabla para ver cómo las métricas y gráficas se actualizan en tiempo
+            real.
+          </p>
+        </div>
+        <div class="demo-tabs" data-aos="fade-up" data-aos-delay="100">
+          <a href="#demo-ventas"><i class="bi bi-bar-chart-line me-1"></i> Ventas</a>
+          <a href="#demo-facturas"><i class="bi bi-receipt me-1"></i> Facturas</a>
+          <a href="#demo-forecast"><i class="bi bi-graph-up-arrow me-1"></i> Forecast</a>
+        </div>
+      </div>
+    </section>
+    <section id="demo-ventas" class="demo-section pt-0">
+      <div class="container">
+        <div class="demo-card" data-aos="fade-up">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="demo-card-header h-100">
+                <div class="demo-icon"><i class="bi bi-bar-chart-line"></i></div>
+                <h3>Analizador de ventas</h3>
+                <p>
+                  Carga un Excel o CSV con ventas por mes, producto e inventario. La demo calcula totales y genera una
+                  gráfica de ventas por periodo.
+                </p>
+                <div class="mt-4 d-grid gap-2">
+                  <a href="assets/demo/reporte_ventas_demo.xlsx" class="btn-lel-dark text-center" download>
+                    <i class="bi bi-download me-1"></i> Descargar template
+                  </a>
+                </div>
+                <div class="demo-upload-box">
+                  <label for="salesFile" class="form-label">Subir archivo actualizado</label>
+                  <input id="salesFile" type="file" class="form-control" accept=".xlsx,.xls,.csv">
+                  <div class="demo-note">Columnas sugeridas: Mes, Producto, Ventas, Inventario.</div>
+                </div>
+                <div class="alert-soft">
+                  <strong>Tip:</strong> cambia los datos del template, guárdalo y súbelo aquí. La tabla y gráfica se
+                  recalculan automáticamente.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="demo-card-body">
+                <div class="kpi-grid">
+                  <div class="kpi-card">
+                    <span>Total ventas</span>
+                    <strong id="salesTotal">$0</strong>
+                  </div>
+                  <div class="kpi-card">
+                    <span>Productos</span>
+                    <strong id="salesProducts">0</strong>
+                  </div>
+                  <div class="kpi-card">
+                    <span>Inventario</span>
+                    <strong id="salesInventory">0 pzas</strong>
+                  </div>
+                </div>
+                <div class="editable-hint">
+                  <i class="bi bi-pencil-square"></i>
+                  Puedes editar las celdas de esta tabla y la gráfica se actualizará automáticamente.
+                </div>
+                <div class="result-panel mb-4">
+                  <div class="result-panel-title">
+                    <h6>Tabla de ventas</h6>
+                    <div class="d-flex align-items-center gap-2">
+                      <small id="salesRows">Datos de ejemplo</small>
+                      <button type="button" class="btn btn-sm btn-outline-primary"
+                        onclick="downloadExcelReport('reporte_ventas_demo.xlsx', 'Reporte de ventas', window.currentSalesRows, 'salesChart')">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table-wrap">
+                    <table class="table table-hover table-bordered" id="salesTable"></table>
+                  </div>
+                </div>
+                <div class="result-panel">
+                  <div class="result-panel-title">
+                    <h6>Gráfica de ventas por mes</h6>
+                    <small>Actualización automática</small>
+                  </div>
+                  <div class="chart-box">
+                    <canvas id="salesChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="demo-facturas" class="demo-section pt-0">
+      <div class="container">
+        <div class="demo-card" data-aos="fade-up">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="demo-card-header h-100">
+                <div class="demo-icon"><i class="bi bi-receipt"></i></div>
+                <h3>Clasificador de facturas</h3>
+                <p>
+                  Carga un ZIP o varios XML dummy. La demo extrae proveedor, monto y clasifica gastos deducibles o no
+                  deducibles con reglas simples de ejemplo.
+                </p>
+                <div class="mt-4 d-grid gap-2">
+                  <a href="assets/demo/facturas_dummy.zip" class="btn-lel-dark text-center" download>
+                    <i class="bi bi-download me-1"></i> Descargar ZIP demo
+                  </a>
+                </div>
+                <div class="demo-upload-box">
+                  <label for="invoiceFile" class="form-label">Subir ZIP o XML</label>
+                  <input id="invoiceFile" type="file" class="form-control" accept=".zip,.xml,.txt" multiple>
+                  <div class="demo-note">Funciona con XML dummy o archivos de texto con datos simulados.</div>
+                </div>
+                <div class="alert-soft">
+                  <strong>Regla demo:</strong>
+                  el campo Concepto funciona como un catálogo de ejemplo. Conceptos como “Papelería y oficina”,
+                  “Software administrativo”, “Equipo de cómputo”, “Publicidad digital” e “Internet empresarial”
+                  se clasifican como deducibles. Conceptos como “Consumo personal”, “Entretenimiento”,
+                  “Regalo” o “Sin comprobante” se clasifican como no deducibles.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="demo-card-body">
+                <div class="kpi-grid">
+                  <div class="kpi-card">
+                    <span>Total facturas</span>
+                    <strong id="invoiceCount">0</strong>
+                  </div>
+                  <div class="kpi-card">
+                    <span>Deducible</span>
+                    <strong id="invoiceDeductible">$0</strong>
+                  </div>
+                  <div class="kpi-card">
+                    <span>No deducible</span>
+                    <strong id="invoiceNonDeductible">$0</strong>
+                  </div>
+                </div>
+                <div class="editable-hint">
+                  <i class="bi bi-pencil-square"></i>
+                  Puedes editar las celdas de esta tabla y la gráfica se actualizará automáticamente.
+                </div>
+                <div class="result-panel mb-4">
+                  <div class="result-panel-title">
+                    <h6>Tabla de facturas</h6>
+                    <div class="d-flex align-items-center gap-2">
+                      <small id="invoiceRows">Datos de ejemplo</small>
+                      <button type="button" class="btn btn-sm btn-outline-primary"
+                        onclick="downloadExcelReport('reporte_facturas_demo.xlsx', 'Reporte de facturas', window.currentInvoiceRows, 'invoiceChart')"
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table-wrap">
+                    <table class="table table-hover table-bordered" id="invoiceTable"></table>
+                  </div>
+                </div>
+                <div class="result-panel">
+                  <div class="result-panel-title">
+                    <h6>Clasificación por monto</h6>
+                    <small>Deducible vs no deducible</small>
+                  </div>
+                  <div class="chart-box">
+                    <canvas id="invoiceChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="demo-forecast" class="demo-section pt-0">
+      <div class="container">
+        <div class="demo-card" data-aos="fade-up">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="demo-card-header h-100">
+                <div class="demo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <h3>Forecast de inventario</h3>
+                <p>
+                  Carga ventas históricas y obtén una estimación simple de demanda mensual e inventario sugerido por
+                  producto.
+                </p>
+                <div class="mt-4 d-grid gap-2">
+                  <a href="assets/demo/forecast_inventario_demo.xlsx" class="btn-lel-dark text-center" download>
+                    <i class="bi bi-download me-1"></i> Descargar template
+                  </a>
+                </div>
+                <div class="demo-upload-box">
+                  <label for="forecastFile" class="form-label">Subir archivo actualizado</label>
+                  <input id="forecastFile" type="file" class="form-control" accept=".xlsx,.xls,.csv">
+                  <div class="demo-note">Columnas sugeridas: Mes, Producto, Ventas, Inventario.</div>
+                  <div class="alert-soft mt-3">
+                    <strong>Cómo funciona:</strong>
+                    esta demo calcula automáticamente un inventario objetivo usando la demanda estimada + 25% de colchón
+                    de
+                    seguridad.
+                    Si el inventario actual es menor al objetivo, el sistema calcula automáticamente la compra sugerida.
+                  </div>
+                </div>
+                <div class="alert-soft">
+                  <strong>Regla demo:</strong> se usa promedio mensual por producto + 25% de colchón de seguridad.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="demo-card-body">
+                <div class="kpi-grid">
+                  <div class="kpi-card">
+                    <span>Demanda estimada</span>
+                    <strong id="forecastDemand">0 pzas</strong>
+                  </div>
+                  <div class="kpi-card">
+                    <span>Inventario sugerido</span>
+                    <strong id="forecastInventory">0 pzas</strong>
+                  </div>
+                  <div class="kpi-card">
+                    <span>Productos analizados</span>
+                    <strong id="forecastProducts">0</strong>
+                  </div>
+                </div>
+                <div class="editable-hint">
+                  <i class="bi bi-pencil-square"></i>
+                  Puedes editar las celdas de esta tabla y la gráfica se actualizará automáticamente.
+                </div>
+                <div class="result-panel mb-4">
+                  <div class="result-panel-title">
+                    <h6>Tabla de forecast</h6>
+                    <div class="d-flex align-items-center gap-2">
+                      <small id="forecastRows">Datos de ejemplo</small>
+                      <button type="button" class="btn btn-sm btn-outline-primary"
+                        onclick="downloadExcelReport('reporte_forecast_demo.xlsx', 'Reporte de forecast', window.currentForecastRows, 'forecastChart')">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table-wrap">
+                    <table class="table table-hover table-bordered" id="forecastTable"></table>
+                  </div>
+                </div>
+                <div class="result-panel">
+                  <div class="result-panel-title">
+                    <h6>Inventario sugerido por producto</h6>
+                    <small>Estimación simple</small>
+                  </div>
+                  <div class="chart-box">
+                    <canvas id="forecastChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="demo-section pt-0">
+      <div class="container">
+        <div class="cta-demo" data-aos="zoom-in">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+              <h2 style="color: #F4FBFF;">¿Quieres una demo conectada a tus datos reales?</h2>
+              <p>
+                Podemos adaptar estas ideas a tu operación: ventas, inventario, facturación, reportes, automatizaciones,
+                dashboards o sistemas internos.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="index.html#contact" class="btn-lel-primary d-inline-block">Solicitar asesoría</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-container text-center">
+      <div class="footer-logo-wrapper">
+        <img src="assets/img/logo_listo_white.png" alt="Listo en Línea" class="footer-logo" loading="lazy"
+          decoding="async">
+      </div>
+      <p class="footer-description">
+        Desarrollamos soluciones digitales para negocios que buscan crecer, optimizarse y avanzar con confianza.
+      </p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/profile.php?id=61589022853078" target="_blank" aria-label="Facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/listoenlinea.soluciones/" target="_blank" aria-label="Instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@listoenlinea.soluciones" target="_blank" rel="noopener noreferrer"
+          aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://wa.me/523312306526" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          <span>Copyright</span>
+          <strong class="px-1 sitename">Listo en Línea</strong>
+          <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          Hecho con enfoque en tecnología, crecimiento y soluciones reales para empresas mexicanas.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Volver arriba">
     <i class="bi bi-arrow-up-short"></i>
-    </a>
-    <div id="preloader"></div>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/vendor/aos/aos.js" defer></script>
-    <!-- Demo Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
-    <!-- Main JS File -->
-    <script src="assets/js/main.js" defer></script>
-    <script defer>
-      window.addEventListener('DOMContentLoaded', () => {
-        const money = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
-        const number = new Intl.NumberFormat('es-MX');
-      
-        const sampleSales = [
-          { Mes: 'Enero', Producto: 'Producto A', Ventas: 12500, Inventario: 42 },
-          { Mes: 'Febrero', Producto: 'Producto A', Ventas: 18900, Inventario: 36 },
-          { Mes: 'Marzo', Producto: 'Producto B', Ventas: 22100, Inventario: 28 },
-          { Mes: 'Abril', Producto: 'Producto C', Ventas: 17500, Inventario: 31 },
-          { Mes: 'Mayo', Producto: 'Producto B', Ventas: 26800, Inventario: 24 }
-        ];
-      
-        const sampleInvoices = [
-          { Archivo: 'factura_demo_001.xml', Proveedor: 'Proveedor Demo', Concepto: 'Papelería y oficina', Monto: 4200, Tipo: 'Deducible' },
-          { Archivo: 'factura_demo_002.xml', Proveedor: 'Servicio Demo', Concepto: 'Consumo personal', Monto: 1300, Tipo: 'No deducible' },
-          { Archivo: 'factura_demo_003.xml', Proveedor: 'Tecnología Demo', Concepto: 'Software administrativo', Monto: 8700, Tipo: 'Deducible' }
-        ];
-      
-        const sampleForecastRaw = [
-          { Mes: 'Enero', Producto: 'Producto A', Ventas: 30, Inventario: 40 },
-          { Mes: 'Febrero', Producto: 'Producto A', Ventas: 34, Inventario: 36 },
-          { Mes: 'Marzo', Producto: 'Producto A', Ventas: 41, Inventario: 29 },
-          { Mes: 'Enero', Producto: 'Producto B', Ventas: 18, Inventario: 28 },
-          { Mes: 'Febrero', Producto: 'Producto B', Ventas: 24, Inventario: 21 },
-          { Mes: 'Marzo', Producto: 'Producto B', Ventas: 29, Inventario: 19 },
-          { Mes: 'Enero', Producto: 'Producto C', Ventas: 14, Inventario: 20 },
-          { Mes: 'Febrero', Producto: 'Producto C', Ventas: 19, Inventario: 15 },
-          { Mes: 'Marzo', Producto: 'Producto C', Ventas: 23, Inventario: 12 }
-        ];
-      
-        let salesChart;
-        let invoiceChart;
-        let forecastChart;
-        window.currentSalesRows = [];
-        window.currentInvoiceRows = [];
-        window.currentForecastRows = [];
-      
-        function normalizeKey(row, possibleNames) {
-          const keys = Object.keys(row || {});
-          const found = keys.find(k => possibleNames.some(name => clean(k) === clean(name)));
-          return found ? row[found] : undefined;
+  </a>
+  <div id="preloader"></div>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <!-- Demo Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      const money = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
+      const number = new Intl.NumberFormat('es-MX');
+
+      const sampleSales = [
+        { Mes: 'Enero', Producto: 'Producto A', Ventas: 12500, Inventario: 42 },
+        { Mes: 'Febrero', Producto: 'Producto A', Ventas: 18900, Inventario: 36 },
+        { Mes: 'Marzo', Producto: 'Producto B', Ventas: 22100, Inventario: 28 },
+        { Mes: 'Abril', Producto: 'Producto C', Ventas: 17500, Inventario: 31 },
+        { Mes: 'Mayo', Producto: 'Producto B', Ventas: 26800, Inventario: 24 }
+      ];
+
+      const sampleInvoices = [
+        { Archivo: 'factura_demo_001.xml', Proveedor: 'Proveedor Demo', Concepto: 'Papelería y oficina', Monto: 4200, Tipo: 'Deducible' },
+        { Archivo: 'factura_demo_002.xml', Proveedor: 'Servicio Demo', Concepto: 'Consumo personal', Monto: 1300, Tipo: 'No deducible' },
+        { Archivo: 'factura_demo_003.xml', Proveedor: 'Tecnología Demo', Concepto: 'Software administrativo', Monto: 8700, Tipo: 'Deducible' }
+      ];
+
+      const sampleForecastRaw = [
+        { Mes: 'Enero', Producto: 'Producto A', Ventas: 30, Inventario: 40 },
+        { Mes: 'Febrero', Producto: 'Producto A', Ventas: 34, Inventario: 36 },
+        { Mes: 'Marzo', Producto: 'Producto A', Ventas: 41, Inventario: 29 },
+        { Mes: 'Enero', Producto: 'Producto B', Ventas: 18, Inventario: 28 },
+        { Mes: 'Febrero', Producto: 'Producto B', Ventas: 24, Inventario: 21 },
+        { Mes: 'Marzo', Producto: 'Producto B', Ventas: 29, Inventario: 19 },
+        { Mes: 'Enero', Producto: 'Producto C', Ventas: 14, Inventario: 20 },
+        { Mes: 'Febrero', Producto: 'Producto C', Ventas: 19, Inventario: 15 },
+        { Mes: 'Marzo', Producto: 'Producto C', Ventas: 23, Inventario: 12 }
+      ];
+
+      let salesChart;
+      let invoiceChart;
+      let forecastChart;
+      window.currentSalesRows = [];
+      window.currentInvoiceRows = [];
+      window.currentForecastRows = [];
+
+      function normalizeKey(row, possibleNames) {
+        const keys = Object.keys(row || {});
+        const found = keys.find(k => possibleNames.some(name => clean(k) === clean(name)));
+        return found ? row[found] : undefined;
+      }
+
+      function clean(value) {
+        return String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      }
+
+      function toNumber(value) {
+        if (typeof value === 'number') return value;
+        if (value === null || value === undefined) return 0;
+
+        const cleanedValue = String(value)
+          .replace(/\$/g, '')
+          .replace(/,/g, '')
+          .replace(/\s/g, '')
+          .replace(/[^0-9.-]/g, '');
+
+        return Number(cleanedValue) || 0;
+      }
+
+      function renderTable(tableId, rows, columns, options = {}) {
+        const table = document.getElementById(tableId);
+        const editable = options.editable || false;
+        const onEdit = options.onEdit || null;
+
+        if (!rows.length) {
+          table.innerHTML = '<tbody><tr><td class="text-center text-muted p-4">Sin datos para mostrar</td></tr></tbody>';
+          return;
         }
-      
-        function clean(value) {
-          return String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-        }
-      
-        function toNumber(value) {
-          if (typeof value === 'number') return value;
-          if (value === null || value === undefined) return 0;
-      
-          const cleanedValue = String(value)
-            .replace(/\$/g, '')
-            .replace(/,/g, '')
-            .replace(/\s/g, '')
-            .replace(/[^0-9.-]/g, '');
-      
-          return Number(cleanedValue) || 0;
-        }
-      
-        function renderTable(tableId, rows, columns, options = {}) {
-          const table = document.getElementById(tableId);
-          const editable = options.editable || false;
-          const onEdit = options.onEdit || null;
-      
-          if (!rows.length) {
-            table.innerHTML = '<tbody><tr><td class="text-center text-muted p-4">Sin datos para mostrar</td></tr></tbody>';
-            return;
-          }
-      
-          const thead = `<thead><tr>${columns.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>`;
-      
-          const tbody = rows.map((row, rowIndex) => `
+
+        const thead = `<thead><tr>${columns.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>`;
+
+        const tbody = rows.map((row, rowIndex) => `
             <tr>
               ${columns.map(c => {
-                const rawValue = row[c.key] ?? '';
-                const displayValue = c.format ? c.format(rawValue, row) : rawValue;
-                const canEdit = editable && c.editable !== false;
-      
-                if (c.inputType === 'select') {
-                  const selectOptions = c.options || [];
-      
-                  return `
+          const rawValue = row[c.key] ?? '';
+          const displayValue = c.format ? c.format(rawValue, row) : rawValue;
+          const canEdit = editable && c.editable !== false;
+
+          if (c.inputType === 'select') {
+            const selectOptions = c.options || [];
+
+            return `
                     <td data-row="${rowIndex}" data-key="${c.key}" data-type="${c.type || 'text'}">
                       <select class="form-select form-select-sm demo-cell-select">
                         ${selectOptions.map(opt => `
@@ -873,9 +947,9 @@
                       </select>
                     </td>
                   `;
-                }
-      
-                return `
+          }
+
+          return `
                   <td
                     ${canEdit ? 'contenteditable="true"' : ''}
                     data-row="${rowIndex}"
@@ -883,71 +957,179 @@
                     data-type="${c.type || 'text'}"
                   >${displayValue}</td>
                 `;
-              }).join('')}
+        }).join('')}
             </tr>
           `).join('');
-      
-          table.innerHTML = `${thead}<tbody>${tbody}</tbody>`;
-      
-          if (!editable || !onEdit) return;
-      
-          table.querySelectorAll('td[contenteditable="true"]').forEach(cell => {
-            cell.addEventListener('blur', () => {
-              const rowIndex = Number(cell.dataset.row);
-              const key = cell.dataset.key;
-              const type = cell.dataset.type;
-              let value = cell.textContent.trim();
-      
-              if (type === 'number' || type === 'money') {
-                value = toNumber(value);
-              }
-      
-              rows[rowIndex][key] = value;
-              onEdit(rows);
-            });
-      
-            cell.addEventListener('keydown', event => {
-              if (event.key === 'Enter') {
-                event.preventDefault();
-                cell.blur();
-              }
-            });
+
+        table.innerHTML = `${thead}<tbody>${tbody}</tbody>`;
+
+        if (!editable || !onEdit) return;
+
+        table.querySelectorAll('td[contenteditable="true"]').forEach(cell => {
+          cell.addEventListener('blur', () => {
+            const rowIndex = Number(cell.dataset.row);
+            const key = cell.dataset.key;
+            const type = cell.dataset.type;
+            let value = cell.textContent.trim();
+
+            if (type === 'number' || type === 'money') {
+              value = toNumber(value);
+            }
+
+            rows[rowIndex][key] = value;
+            onEdit(rows);
           });
-      
-          table.querySelectorAll('.demo-cell-select').forEach(select => {
-            select.addEventListener('change', () => {
-              const cell = select.closest('td');
-              const rowIndex = Number(cell.dataset.row);
-              const key = cell.dataset.key;
-      
-              rows[rowIndex][key] = select.value;
-              onEdit(rows);
-            });
+
+          cell.addEventListener('keydown', event => {
+            if (event.key === 'Enter') {
+              event.preventDefault();
+              cell.blur();
+            }
+          });
+        });
+
+        table.querySelectorAll('.demo-cell-select').forEach(select => {
+          select.addEventListener('change', () => {
+            const cell = select.closest('td');
+            const rowIndex = Number(cell.dataset.row);
+            const key = cell.dataset.key;
+
+            rows[rowIndex][key] = select.value;
+            onEdit(rows);
+          });
+        });
+      }
+
+      async function downloadExcelReport(fileName, title, rows, chartId) {
+        if (!rows || !rows.length) {
+          alert('No hay datos para descargar.');
+          return;
+        }
+
+        const workbook = new ExcelJS.Workbook();
+        workbook.creator = 'Listo en Línea';
+
+        const sheet = workbook.addWorksheet('Reporte', {
+          views: [{ showGridLines: false }]
+        });
+
+        const columns = Object.keys(rows[0]);
+
+        // Anchos
+        sheet.columns = columns.map(col => ({
+          header: col,
+          key: col,
+          width: Math.max(18, col.length + 4)
+        }));
+
+        // Título
+        sheet.mergeCells(1, 1, 1, columns.length);
+        const titleCell = sheet.getCell('A1');
+        titleCell.value = title;
+        titleCell.font = { bold: true, size: 20, color: { argb: 'FFFFFFFF' } };
+        titleCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'FF071B2C' }
+        };
+        titleCell.alignment = { vertical: 'middle', horizontal: 'center' };
+        sheet.getRow(1).height = 34;
+
+        // Subtítulo
+        sheet.mergeCells(2, 1, 2, columns.length);
+        const subtitleCell = sheet.getCell('A2');
+        subtitleCell.value = 'Reporte generado desde la demo interactiva de Listo en Línea con los datos actuales.';
+        subtitleCell.font = { italic: true, color: { argb: 'FF637381' } };
+        subtitleCell.alignment = { horizontal: 'center' };
+
+        // Encabezados
+        const headerRowNumber = 4;
+        columns.forEach((col, index) => {
+          const cell = sheet.getCell(headerRowNumber, index + 1);
+          cell.value = col.replaceAll('_', ' ');
+          cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+          cell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'FF0F97BA' }
+          };
+          cell.alignment = { horizontal: 'center' };
+          cell.border = {
+            top: { style: 'thin', color: { argb: 'FFD9EEF5' } },
+            left: { style: 'thin', color: { argb: 'FFD9EEF5' } },
+            bottom: { style: 'thin', color: { argb: 'FFD9EEF5' } },
+            right: { style: 'thin', color: { argb: 'FFD9EEF5' } }
+          };
+        });
+
+        // Datos
+        rows.forEach((row, rowIndex) => {
+          const excelRow = sheet.getRow(headerRowNumber + 1 + rowIndex);
+
+          columns.forEach((col, colIndex) => {
+            const cell = excelRow.getCell(colIndex + 1);
+            cell.value = row[col];
+
+            cell.fill = {
+              type: 'pattern',
+              pattern: 'solid',
+              fgColor: { argb: rowIndex % 2 === 0 ? 'FFF7FCFE' : 'FFFFFFFF' }
+            };
+
+            cell.border = {
+              top: { style: 'thin', color: { argb: 'FFE4EEF2' } },
+              left: { style: 'thin', color: { argb: 'FFE4EEF2' } },
+              bottom: { style: 'thin', color: { argb: 'FFE4EEF2' } },
+              right: { style: 'thin', color: { argb: 'FFE4EEF2' } }
+            };
+          });
+        });
+
+        // Congelar encabezados
+        sheet.views = [{ state: 'frozen', ySplit: 4, showGridLines: false }];
+
+        // Imagen de la gráfica actual
+        const chartCanvas = document.getElementById(chartId);
+
+        if (chartCanvas) {
+          const imageBase64 = chartCanvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, '');
+
+          const imageId = workbook.addImage({
+            base64: imageBase64,
+            extension: 'png'
+          });
+
+          const chartStartRow = headerRowNumber + rows.length + 3;
+
+          sheet.mergeCells(chartStartRow, 1, chartStartRow, columns.length);
+          const chartTitleCell = sheet.getCell(chartStartRow, 1);
+          chartTitleCell.value = 'Gráfica del reporte';
+          chartTitleCell.font = { bold: true, size: 15, color: { argb: 'FF071B2C' } };
+
+          sheet.addImage(imageId, {
+            tl: { col: 0, row: chartStartRow + 1 },
+            ext: { width: 780, height: 320 }
           });
         }
-      
-        function downloadExcelReport(fileName, rows, sheetName = 'Reporte') {
-            if (!rows || !rows.length) {
-              alert('No hay datos para descargar.');
-              return;
-            }
-      
-            const worksheet = XLSX.utils.json_to_sheet(rows);
-            const workbook = XLSX.utils.book_new();
-      
-            XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
-            XLSX.writeFile(workbook, fileName);
-          }
-      
-          window.downloadExcelReport = downloadExcelReport;
-      
-        function downloadHTMLReport(fileName, title, rows, chartId) {
-            const chartCanvas = document.getElementById(chartId);
-            const chartImage = chartCanvas ? chartCanvas.toDataURL('image/png') : '';
-      
-            const columns = rows.length ? Object.keys(rows[0]) : [];
-      
-            const tableHtml = `
+
+        // Descargar
+        const buffer = await workbook.xlsx.writeBuffer();
+        const blob = new Blob([buffer], {
+          type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        });
+
+        saveAs(blob, fileName);
+      }
+
+      window.downloadExcelReport = downloadExcelReport;
+
+      function downloadHTMLReport(fileName, title, rows, chartId) {
+        const chartCanvas = document.getElementById(chartId);
+        const chartImage = chartCanvas ? chartCanvas.toDataURL('image/png') : '';
+
+        const columns = rows.length ? Object.keys(rows[0]) : [];
+
+        const tableHtml = `
               <table>
                 <thead>
                   <tr>${columns.map(col => `<th>${col}</th>`).join('')}</tr>
@@ -961,8 +1143,8 @@
                 </tbody>
               </table>
             `;
-      
-            const html = `
+
+        const html = `
               <!DOCTYPE html>
               <html lang="es">
               <head>
@@ -1035,432 +1217,433 @@
               </body>
               </html>
             `;
-      
-            const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-      
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = fileName;
-            link.click();
-      
-            URL.revokeObjectURL(url);
-          }
-      
-          window.downloadHTMLReport = downloadHTMLReport;
-          function groupSum(rows, labelKey, valueKey) {
-            return rows.reduce((acc, row) => {
-              const label = row[labelKey] || 'Sin dato';
-              acc[label] = (acc[label] || 0) + toNumber(row[valueKey]);
-              return acc;
-            }, {});
-          }
-      
-          function drawBarChart(canvasId, chartRef, labels, data, label) {
-            const ctx = document.getElementById(canvasId);
-            if (chartRef) chartRef.destroy();
-      
-            return new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels,
-                datasets: [{
-                  label,
-                  data,
-                  borderWidth: 1,
-                  borderRadius: 10
-                }]
-              },
-              options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                  legend: { display: false },
-                  tooltip: { mode: 'index', intersect: false }
-                },
-                scales: {
-                  y: { beginAtZero: true, grid: { color: 'rgba(7,27,44,.08)' } },
-                  x: { grid: { display: false } }
-                }
-              }
-            });
-          }
-      
-          function drawDoughnutChart(canvasId, chartRef, labels, data) {
-            const ctx = document.getElementById(canvasId);
-            if (chartRef) chartRef.destroy();
-      
-            return new Chart(ctx, {
-              type: 'doughnut',
-              data: {
-                labels,
-                datasets: [{ data, borderWidth: 2 }]
-              },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: { legend: { position: 'bottom' } }
+
+        const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        link.click();
+
+        URL.revokeObjectURL(url);
+      }
+
+      window.downloadHTMLReport = downloadHTMLReport;
+      function groupSum(rows, labelKey, valueKey) {
+        return rows.reduce((acc, row) => {
+          const label = row[labelKey] || 'Sin dato';
+          acc[label] = (acc[label] || 0) + toNumber(row[valueKey]);
+          return acc;
+        }, {});
+      }
+
+      function drawBarChart(canvasId, chartRef, labels, data, label) {
+        const ctx = document.getElementById(canvasId);
+        if (chartRef) chartRef.destroy();
+
+        return new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label,
+              data,
+              borderWidth: 1,
+              borderRadius: 10
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { mode: 'index', intersect: false }
+            },
+            scales: {
+              y: { beginAtZero: true, grid: { color: 'rgba(7,27,44,.08)' } },
+              x: { grid: { display: false } }
             }
-          });
-        }
-        function formatExcelDateToMonth(value) {
-          if (!value) return '';
-      
-          if (typeof value === 'number') {
-            const date = XLSX.SSF.parse_date_code(value);
-            if (!date) return '';
-      
-            const months = [
-              'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-              'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
-            ];
-          
-            return months[date.m - 1] || '';
           }
-      
-          return value;
-        }
-        function updateSales(rows) {
-          const data = rows.map(row => ({
-            Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo']) || formatExcelDateToMonth(normalizeKey(row, ['Fecha'])) || 'Sin mes',
-            Producto: normalizeKey(row, ['Producto', 'Product', 'Modelo', 'Articulo', 'Artículo']) || 'Sin producto',
-            Ventas: toNumber(normalizeKey(row, ['Ventas', 'Venta', 'Importe', 'Monto', 'Revenue'])),
-            Inventario: toNumber(normalizeKey(row, ['Inventario', 'Stock', 'Existencia', 'Piezas']))
-          })).filter(row => row.Producto !== 'Sin producto' || row.Ventas > 0 || row.Inventario > 0);
-      
-          window.currentSalesRows = data;
-          const total = data.reduce((sum, row) => sum + row.Ventas, 0);
-          const inventory = data.reduce((sum, row) => sum + row.Inventario, 0);
-          const products = new Set(data.map(row => row.Producto)).size;
-          const grouped = groupSum(data, 'Mes', 'Ventas');
-      
-          document.getElementById('salesTotal').textContent = money.format(total);
-          document.getElementById('salesProducts').textContent = number.format(products);
-          document.getElementById('salesInventory').textContent = `${number.format(inventory)} pzas`;
-          document.getElementById('salesRows').textContent = `${number.format(data.length)} registros`;
-          document.getElementById('heroMetricSales').textContent = money.format(total);
-      
-          renderTable('salesTable', data, [
-            { key: 'Mes', editable: false, label: 'Mes' },
-            { key: 'Producto', label: 'Producto', editable: false},
-            { key: 'Ventas', label: 'Ventas', type: 'money', format: value => money.format(toNumber(value)) },
-            { key: 'Inventario', label: 'Inventario', type: 'number', editable: false, format: value => `${number.format(toNumber(value))} pzas` }
-          ], {
-            editable: true,
-            onEdit: updateSales
-          });
-      
-          salesChart = drawBarChart('salesChart', salesChart, Object.keys(grouped), Object.values(grouped), 'Ventas');
-        }
-      
-        function getConceptOptions() {
-          return [
-            { value: 'Papelería y oficina', type: 'Deducible' },
-            { value: 'Software administrativo', type: 'Deducible' },
-            { value: 'Equipo de cómputo', type: 'Deducible' },
-            { value: 'Publicidad digital', type: 'Deducible' },
-            { value: 'Servicio de internet empresarial', type: 'Deducible' },
-            { value: 'Consumo personal', type: 'No deducible' },
-            { value: 'Entretenimiento', type: 'No deducible' },
-            { value: 'Regalo', type: 'No deducible' },
-            { value: 'Sin comprobante', type: 'No deducible' }
+        });
+      }
+
+      function drawDoughnutChart(canvasId, chartRef, labels, data) {
+        const ctx = document.getElementById(canvasId);
+        if (chartRef) chartRef.destroy();
+
+        return new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels,
+            datasets: [{ data, borderWidth: 2 }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'bottom' } }
+          }
+        });
+      }
+      function formatExcelDateToMonth(value) {
+        if (!value) return '';
+
+        if (typeof value === 'number') {
+          const date = XLSX.SSF.parse_date_code(value);
+          if (!date) return '';
+
+          const months = [
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
           ];
+
+          return months[date.m - 1] || '';
         }
-      
-        function recalculateInvoices(rows) {
-            const conceptOptions = getConceptOptions();
-      
-            const recalculatedRows = rows.map(row => {
-              const selectedConcept = conceptOptions.find(opt => opt.value === row.Concepto);
-      
-              return {
-                ...row,
-                Tipo: selectedConcept ? selectedConcept.type : classifyInvoice(row.Concepto || '')
-              };
-            });
-      
-            window.currentInvoiceRows = recalculatedRows;
-      
-            const deductibleRows = recalculatedRows.filter(row => row.Tipo === 'Deducible');
-            const nonDeductibleRows = recalculatedRows.filter(row => row.Tipo === 'No deducible');
-      
-            const deductibleTotal = deductibleRows.reduce((sum, row) => sum + toNumber(row.Monto), 0);
-            const nonDeductibleTotal = nonDeductibleRows.reduce((sum, row) => sum + toNumber(row.Monto), 0);
-      
-            document.getElementById('invoiceCount').textContent = number.format(recalculatedRows.length);
-            document.getElementById('invoiceDeductible').textContent = money.format(deductibleTotal);
-            document.getElementById('invoiceNonDeductible').textContent = money.format(nonDeductibleTotal);
-            document.getElementById('invoiceRows').textContent = `${number.format(recalculatedRows.length)} registros`;
-            document.getElementById('heroMetricInvoices').textContent = number.format(recalculatedRows.length);
-      
-            renderTable('invoiceTable', recalculatedRows, [
-              { key: 'Archivo', label: 'Archivo', editable: false },
-              { key: 'Proveedor', label: 'Proveedor', editable: false },
-              {
-                key: 'Concepto',
-                label: 'Concepto',
-                inputType: 'select',
-                options: conceptOptions
-              },
-              {
-                key: 'Monto',
-                label: 'Monto',
-                editable: false,
-                type: 'money',
-                format: value => money.format(toNumber(value))
-              },
-              {
-                key: 'Tipo',
-                label: 'Clasificación',
-                editable: false
-              }
-            ], {
-              editable: true,
-              onEdit: recalculateInvoices
-            });
-      
-            invoiceChart = drawDoughnutChart(
-              'invoiceChart',
-              invoiceChart,
-              ['Deducible', 'No deducible'],
-              [deductibleTotal, nonDeductibleTotal]
-            );
-          }
-      
-        function updateInvoices(rows) {
-          const data = rows.map(row => ({
-            Archivo: row.Archivo || row.fileName || 'Archivo cargado',
-            Proveedor: row.Proveedor || row.Emisor || row.proveedor || 'Proveedor no identificado',
-            Concepto: row.Concepto || row.Descripcion || row.descripcion || 'Papelería y oficina',
-            Monto: toNumber(row.Monto || row.Total || row.total || row.Importe || 0),
-            Tipo: row.Tipo || classifyInvoice(row.Concepto || row.Descripcion || row.descripcion || '')
-          }));
-      
-          recalculateInvoices(data);
-        }
-      
-        function refreshForecastCalculatedTable(rows) {
-          const recalculatedRows = rows.map(row => {
-            const demanda = toNumber(row.Demanda_Estimada);
-            const inventarioActual = toNumber(row.Inventario_Actual);
-            const inventarioSugerido = Math.ceil(demanda * 1.25);
-            const faltante = Math.max(inventarioSugerido - inventarioActual, 0);
-      
-            return {
-              Producto: row.Producto,
-              Demanda_Estimada: demanda,
-              Inventario_Actual: inventarioActual,
-              Inventario_Sugerido: inventarioSugerido,
-              Faltante: faltante
-            };
-          });
-      
-          window.currentForecastRows = recalculatedRows;
-      
-          const totalDemand = recalculatedRows.reduce((sum, row) => sum + row.Demanda_Estimada, 0);
-          const suggested = recalculatedRows.reduce((sum, row) => sum + row.Inventario_Sugerido, 0);
-      
-          document.getElementById('forecastDemand').textContent = `${number.format(totalDemand)} pzas`;
-          document.getElementById('forecastInventory').textContent = `${number.format(suggested)} pzas`;
-          document.getElementById('forecastProducts').textContent = number.format(recalculatedRows.length);
-          document.getElementById('forecastRows').textContent = `${number.format(recalculatedRows.length)} productos`;
-          document.getElementById('heroMetricInventory').textContent = `${number.format(suggested)} pzas`;
-      
-          renderTable('forecastTable', recalculatedRows, [
-            { key: 'Producto', label: 'Producto', editable: false },
-      
-            {
-              key: 'Demanda_Estimada',
-              label: 'Demanda estimada',
-              type: 'number',
-              format: value => `${number.format(toNumber(value))} pzas`
-            },
-      
-            {
-              key: 'Inventario_Actual',
-              label: 'Inventario actual',
-              editable: false,
-              type: 'number',
-              format: value => `${number.format(toNumber(value))} pzas`
-            },
-      
-            {
-              key: 'Inventario_Sugerido',
-              label: 'Inventario objetivo',
-              editable: false,
-              type: 'number',
-              format: value => `${number.format(toNumber(value))} pzas`
-            },
-      
-            {
-              key: 'Faltante',
-              label: 'Compra sugerida',
-              editable: false,
-              type: 'number',
-              format: value => `${number.format(toNumber(value))} pzas`
-            }
-      
-          ], {
-            editable: true,
-            onEdit: refreshForecastCalculatedTable
-          });
-      
-          forecastChart = drawBarChart(
-            'forecastChart',
-            forecastChart,
-            recalculatedRows.map(row => row.Producto),
-            recalculatedRows.map(row => toNumber(row.Inventario_Sugerido)),
-            'Inventario sugerido'
-          );
-        }
-      
-        function updateForecast(rows) {
-          const normalized = rows.map(row => ({
-            Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo']) || formatExcelDateToMonth(normalizeKey(row, ['Fecha'])) || 'Sin mes',
-            Producto: normalizeKey(row, ['Producto', 'Product', 'Modelo', 'Articulo', 'Artículo']) || 'Sin producto',
-            Ventas: toNumber(normalizeKey(row, ['Ventas', 'Venta', 'Piezas', 'Demanda', 'Unidades'])),
-            Inventario: toNumber(normalizeKey(row, ['Inventario', 'Stock', 'Existencia']))
-          })).filter(row => row.Producto !== 'Sin producto' || row.Ventas > 0);
-      
-          const byProduct = normalized.reduce((acc, row) => {
-            if (!acc[row.Producto]) {
-              acc[row.Producto] = {
-                Producto: row.Producto,
-                ventas: 0,
-                registros: 0,
-                inventario: 0
-              };
-            }
-      
-            acc[row.Producto].ventas += row.Ventas;
-            acc[row.Producto].registros += 1;
-            acc[row.Producto].inventario = Math.max(acc[row.Producto].inventario, row.Inventario || 0);
-      
-            return acc;
-          }, {});
-      
-          const data = Object.values(byProduct).map(row => {
-            const demanda = Math.ceil(row.ventas / Math.max(row.registros, 1));
-            const inventarioActual = row.inventario;
-            const inventarioSugerido = Math.ceil(demanda * 1.25);
-            const faltante = Math.max(inventarioSugerido - inventarioActual, 0);
-      
-            return {
-              Producto: row.Producto,
-              Demanda_Estimada: demanda,
-              Inventario_Actual: inventarioActual,
-              Inventario_Sugerido: inventarioSugerido,
-              Faltante: faltante
-            };
-          });
-      
-          refreshForecastCalculatedTable(data);
-        }
-      
-        function classifyInvoice(text) {
-          const value = clean(text);
-          const nonDeductibleWords = ['personal', 'entretenimiento', 'regalo', 'sin comprobante', 'no deducible'];
-          return nonDeductibleWords.some(word => value.includes(word)) ? 'No deducible' : 'Deducible';
-        }
-      
-        async function readSpreadsheet(file) {
-          const extension = file.name.split('.').pop().toLowerCase();
-          const buffer = await file.arrayBuffer();
-          const workbook = XLSX.read(buffer, { type: 'array' });
-          const sheet = workbook.Sheets[workbook.SheetNames[0]];
-          return XLSX.utils.sheet_to_json(sheet, {
-            range: 1,
-            defval: ''
-          });
-        }
-      
-        function extractXmlValue(text, patterns) {
-          for (const pattern of patterns) {
-            const match = text.match(pattern);
-            if (match && match[1]) return match[1];
-          }
-          return '';
-        }
-      
-        function parseInvoiceText(fileName, text) {
-          const provider = extractXmlValue(text, [
-            /Nombre=["']([^"']+)["']/i,
-            /<Proveedor>(.*?)<\/Proveedor>/i,
-            /<Emisor>(.*?)<\/Emisor>/i,
-            /Proveedor:\s*(.*)/i
-          ]) || 'Proveedor no identificado';
-      
-          const concept = extractXmlValue(text, [
-            /Descripcion=["']([^"']+)["']/i,
-            /Descripción=["']([^"']+)["']/i,
-            /<Concepto>(.*?)<\/Concepto>/i,
-            /Concepto:\s*(.*)/i
-          ]) || 'Concepto no identificado';
-      
-          const total = extractXmlValue(text, [
-            /Total=["']([0-9.,]+)["']/i,
-            /total=["']([0-9.,]+)["']/i,
-            /<Total>(.*?)<\/Total>/i,
-            /Monto:\s*([0-9.,]+)/i
-          ]);
-      
+
+        return value;
+      }
+      function updateSales(rows) {
+        const data = rows.map(row => ({
+          Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo']) || formatExcelDateToMonth(normalizeKey(row, ['Fecha'])) || 'Sin mes',
+          Producto: normalizeKey(row, ['Producto', 'Product', 'Modelo', 'Articulo', 'Artículo']) || 'Sin producto',
+          Ventas: toNumber(normalizeKey(row, ['Ventas', 'Venta', 'Importe', 'Monto', 'Revenue'])),
+          Inventario: toNumber(normalizeKey(row, ['Inventario', 'Stock', 'Existencia', 'Piezas']))
+        })).filter(row => row.Producto !== 'Sin producto' || row.Ventas > 0 || row.Inventario > 0);
+
+        window.currentSalesRows = data;
+        const total = data.reduce((sum, row) => sum + row.Ventas, 0);
+        const inventory = data.reduce((sum, row) => sum + row.Inventario, 0);
+        const products = new Set(data.map(row => row.Producto)).size;
+        const grouped = groupSum(data, 'Mes', 'Ventas');
+
+        document.getElementById('salesTotal').textContent = money.format(total);
+        document.getElementById('salesProducts').textContent = number.format(products);
+        document.getElementById('salesInventory').textContent = `${number.format(inventory)} pzas`;
+        document.getElementById('salesRows').textContent = `${number.format(data.length)} registros`;
+        document.getElementById('heroMetricSales').textContent = money.format(total);
+
+        renderTable('salesTable', data, [
+          { key: 'Mes', editable: false, label: 'Mes' },
+          { key: 'Producto', label: 'Producto', editable: false },
+          { key: 'Ventas', label: 'Ventas', type: 'money', format: value => money.format(toNumber(value)) },
+          { key: 'Inventario', label: 'Inventario', type: 'number', editable: false, format: value => `${number.format(toNumber(value))} pzas` }
+        ], {
+          editable: true,
+          onEdit: updateSales
+        });
+
+        salesChart = drawBarChart('salesChart', salesChart, Object.keys(grouped), Object.values(grouped), 'Ventas');
+      }
+
+      function getConceptOptions() {
+        return [
+          { value: 'Papelería y oficina', type: 'Deducible' },
+          { value: 'Software administrativo', type: 'Deducible' },
+          { value: 'Equipo de cómputo', type: 'Deducible' },
+          { value: 'Publicidad digital', type: 'Deducible' },
+          { value: 'Servicio de internet empresarial', type: 'Deducible' },
+          { value: 'Consumo personal', type: 'No deducible' },
+          { value: 'Entretenimiento', type: 'No deducible' },
+          { value: 'Regalo', type: 'No deducible' },
+          { value: 'Sin comprobante', type: 'No deducible' }
+        ];
+      }
+
+      function recalculateInvoices(rows) {
+        const conceptOptions = getConceptOptions();
+
+        const recalculatedRows = rows.map(row => {
+          const selectedConcept = conceptOptions.find(opt => opt.value === row.Concepto);
+
           return {
-            Archivo: fileName,
-            Proveedor: provider,
-            Concepto: concept,
-            Monto: toNumber(total),
-            Tipo: classifyInvoice(`${provider} ${concept}`)
+            ...row,
+            Tipo: selectedConcept ? selectedConcept.type : classifyInvoice(row.Concepto || '')
           };
-        }
-      
-        async function readInvoiceFiles(files) {
-          const rows = [];
-      
-          for (const file of files) {
-            const extension = file.name.split('.').pop().toLowerCase();
-      
-            if (extension === 'zip') {
-              const zip = await JSZip.loadAsync(await file.arrayBuffer());
-              const entries = Object.values(zip.files).filter(entry => !entry.dir);
-      
-              for (const entry of entries) {
-                const text = await entry.async('text');
-                rows.push(parseInvoiceText(entry.name, text));
-              }
-            } else {
-              const text = await file.text();
-              rows.push(parseInvoiceText(file.name, text));
-            }
+        });
+
+        window.currentInvoiceRows = recalculatedRows;
+
+        const deductibleRows = recalculatedRows.filter(row => row.Tipo === 'Deducible');
+        const nonDeductibleRows = recalculatedRows.filter(row => row.Tipo === 'No deducible');
+
+        const deductibleTotal = deductibleRows.reduce((sum, row) => sum + toNumber(row.Monto), 0);
+        const nonDeductibleTotal = nonDeductibleRows.reduce((sum, row) => sum + toNumber(row.Monto), 0);
+
+        document.getElementById('invoiceCount').textContent = number.format(recalculatedRows.length);
+        document.getElementById('invoiceDeductible').textContent = money.format(deductibleTotal);
+        document.getElementById('invoiceNonDeductible').textContent = money.format(nonDeductibleTotal);
+        document.getElementById('invoiceRows').textContent = `${number.format(recalculatedRows.length)} registros`;
+        document.getElementById('heroMetricInvoices').textContent = number.format(recalculatedRows.length);
+
+        renderTable('invoiceTable', recalculatedRows, [
+          { key: 'Archivo', label: 'Archivo', editable: false },
+          { key: 'Proveedor', label: 'Proveedor', editable: false },
+          {
+            key: 'Concepto',
+            label: 'Concepto',
+            inputType: 'select',
+            options: conceptOptions
+          },
+          {
+            key: 'Monto',
+            label: 'Monto',
+            editable: false,
+            type: 'money',
+            format: value => money.format(toNumber(value))
+          },
+          {
+            key: 'Tipo',
+            label: 'Clasificación',
+            editable: false
           }
-      
-          return rows;
+        ], {
+          editable: true,
+          onEdit: recalculateInvoices
+        });
+
+        invoiceChart = drawDoughnutChart(
+          'invoiceChart',
+          invoiceChart,
+          ['Deducible', 'No deducible'],
+          [deductibleTotal, nonDeductibleTotal]
+        );
+      }
+
+      function updateInvoices(rows) {
+        const data = rows.map(row => ({
+          Archivo: row.Archivo || row.fileName || 'Archivo cargado',
+          Proveedor: row.Proveedor || row.Emisor || row.proveedor || 'Proveedor no identificado',
+          Concepto: row.Concepto || row.Descripcion || row.descripcion || 'Papelería y oficina',
+          Monto: toNumber(row.Monto || row.Total || row.total || row.Importe || 0),
+          Tipo: row.Tipo || classifyInvoice(row.Concepto || row.Descripcion || row.descripcion || '')
+        }));
+
+        recalculateInvoices(data);
+      }
+
+      function refreshForecastCalculatedTable(rows) {
+        const recalculatedRows = rows.map(row => {
+          const demanda = toNumber(row.Demanda_Estimada);
+          const inventarioActual = toNumber(row.Inventario_Actual);
+          const inventarioSugerido = Math.ceil(demanda * 1.25);
+          const faltante = Math.max(inventarioSugerido - inventarioActual, 0);
+
+          return {
+            Producto: row.Producto,
+            Demanda_Estimada: demanda,
+            Inventario_Actual: inventarioActual,
+            Inventario_Sugerido: inventarioSugerido,
+            Faltante: faltante
+          };
+        });
+
+        window.currentForecastRows = recalculatedRows;
+
+        const totalDemand = recalculatedRows.reduce((sum, row) => sum + row.Demanda_Estimada, 0);
+        const suggested = recalculatedRows.reduce((sum, row) => sum + row.Inventario_Sugerido, 0);
+
+        document.getElementById('forecastDemand').textContent = `${number.format(totalDemand)} pzas`;
+        document.getElementById('forecastInventory').textContent = `${number.format(suggested)} pzas`;
+        document.getElementById('forecastProducts').textContent = number.format(recalculatedRows.length);
+        document.getElementById('forecastRows').textContent = `${number.format(recalculatedRows.length)} productos`;
+        document.getElementById('heroMetricInventory').textContent = `${number.format(suggested)} pzas`;
+
+        renderTable('forecastTable', recalculatedRows, [
+          { key: 'Producto', label: 'Producto', editable: false },
+
+          {
+            key: 'Demanda_Estimada',
+            label: 'Demanda estimada',
+            type: 'number',
+            format: value => `${number.format(toNumber(value))} pzas`
+          },
+
+          {
+            key: 'Inventario_Actual',
+            label: 'Inventario actual',
+            editable: false,
+            type: 'number',
+            format: value => `${number.format(toNumber(value))} pzas`
+          },
+
+          {
+            key: 'Inventario_Sugerido',
+            label: 'Inventario objetivo',
+            editable: false,
+            type: 'number',
+            format: value => `${number.format(toNumber(value))} pzas`
+          },
+
+          {
+            key: 'Faltante',
+            label: 'Compra sugerida',
+            editable: false,
+            type: 'number',
+            format: value => `${number.format(toNumber(value))} pzas`
+          }
+
+        ], {
+          editable: true,
+          onEdit: refreshForecastCalculatedTable
+        });
+
+        forecastChart = drawBarChart(
+          'forecastChart',
+          forecastChart,
+          recalculatedRows.map(row => row.Producto),
+          recalculatedRows.map(row => toNumber(row.Inventario_Sugerido)),
+          'Inventario sugerido'
+        );
+      }
+
+      function updateForecast(rows) {
+        const normalized = rows.map(row => ({
+          Mes: normalizeKey(row, ['Mes', 'Month', 'Periodo']) || formatExcelDateToMonth(normalizeKey(row, ['Fecha'])) || 'Sin mes',
+          Producto: normalizeKey(row, ['Producto', 'Product', 'Modelo', 'Articulo', 'Artículo']) || 'Sin producto',
+          Ventas: toNumber(normalizeKey(row, ['Ventas', 'Venta', 'Piezas', 'Demanda', 'Unidades'])),
+          Inventario: toNumber(normalizeKey(row, ['Inventario', 'Stock', 'Existencia']))
+        })).filter(row => row.Producto !== 'Sin producto' || row.Ventas > 0);
+
+        const byProduct = normalized.reduce((acc, row) => {
+          if (!acc[row.Producto]) {
+            acc[row.Producto] = {
+              Producto: row.Producto,
+              ventas: 0,
+              registros: 0,
+              inventario: 0
+            };
+          }
+
+          acc[row.Producto].ventas += row.Ventas;
+          acc[row.Producto].registros += 1;
+          acc[row.Producto].inventario = Math.max(acc[row.Producto].inventario, row.Inventario || 0);
+
+          return acc;
+        }, {});
+
+        const data = Object.values(byProduct).map(row => {
+          const demanda = Math.ceil(row.ventas / Math.max(row.registros, 1));
+          const inventarioActual = row.inventario;
+          const inventarioSugerido = Math.ceil(demanda * 1.25);
+          const faltante = Math.max(inventarioSugerido - inventarioActual, 0);
+
+          return {
+            Producto: row.Producto,
+            Demanda_Estimada: demanda,
+            Inventario_Actual: inventarioActual,
+            Inventario_Sugerido: inventarioSugerido,
+            Faltante: faltante
+          };
+        });
+
+        refreshForecastCalculatedTable(data);
+      }
+
+      function classifyInvoice(text) {
+        const value = clean(text);
+        const nonDeductibleWords = ['personal', 'entretenimiento', 'regalo', 'sin comprobante', 'no deducible'];
+        return nonDeductibleWords.some(word => value.includes(word)) ? 'No deducible' : 'Deducible';
+      }
+
+      async function readSpreadsheet(file) {
+        const extension = file.name.split('.').pop().toLowerCase();
+        const buffer = await file.arrayBuffer();
+        const workbook = XLSX.read(buffer, { type: 'array' });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        return XLSX.utils.sheet_to_json(sheet, {
+          range: 1,
+          defval: ''
+        });
+      }
+
+      function extractXmlValue(text, patterns) {
+        for (const pattern of patterns) {
+          const match = text.match(pattern);
+          if (match && match[1]) return match[1];
         }
-      
-        document.getElementById('salesFile').addEventListener('change', async (event) => {
-          const file = event.target.files[0];
-          if (!file) return;
-          const rows = await readSpreadsheet(file);
-          updateSales(rows);
-        });
-      
-        document.getElementById('invoiceFile').addEventListener('change', async (event) => {
-          const files = Array.from(event.target.files || []);
-          if (!files.length) return;
-          const rows = await readInvoiceFiles(files);
-          updateInvoices(rows);
-        });
-      
-        document.getElementById('forecastFile').addEventListener('change', async (event) => {
-          const file = event.target.files[0];
-          if (!file) return;
-          const rows = await readSpreadsheet(file);
-          updateForecast(rows);
-        });
-      
-        updateSales(sampleSales);
-        updateInvoices(sampleInvoices);
-        updateForecast(sampleForecastRaw);
+        return '';
+      }
+
+      function parseInvoiceText(fileName, text) {
+        const provider = extractXmlValue(text, [
+          /Nombre=["']([^"']+)["']/i,
+          /<Proveedor>(.*?)<\/Proveedor>/i,
+          /<Emisor>(.*?)<\/Emisor>/i,
+          /Proveedor:\s*(.*)/i
+        ]) || 'Proveedor no identificado';
+
+        const concept = extractXmlValue(text, [
+          /Descripcion=["']([^"']+)["']/i,
+          /Descripción=["']([^"']+)["']/i,
+          /<Concepto>(.*?)<\/Concepto>/i,
+          /Concepto:\s*(.*)/i
+        ]) || 'Concepto no identificado';
+
+        const total = extractXmlValue(text, [
+          /Total=["']([0-9.,]+)["']/i,
+          /total=["']([0-9.,]+)["']/i,
+          /<Total>(.*?)<\/Total>/i,
+          /Monto:\s*([0-9.,]+)/i
+        ]);
+
+        return {
+          Archivo: fileName,
+          Proveedor: provider,
+          Concepto: concept,
+          Monto: toNumber(total),
+          Tipo: classifyInvoice(`${provider} ${concept}`)
+        };
+      }
+
+      async function readInvoiceFiles(files) {
+        const rows = [];
+
+        for (const file of files) {
+          const extension = file.name.split('.').pop().toLowerCase();
+
+          if (extension === 'zip') {
+            const zip = await JSZip.loadAsync(await file.arrayBuffer());
+            const entries = Object.values(zip.files).filter(entry => !entry.dir);
+
+            for (const entry of entries) {
+              const text = await entry.async('text');
+              rows.push(parseInvoiceText(entry.name, text));
+            }
+          } else {
+            const text = await file.text();
+            rows.push(parseInvoiceText(file.name, text));
+          }
+        }
+
+        return rows;
+      }
+
+      document.getElementById('salesFile').addEventListener('change', async (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+        const rows = await readSpreadsheet(file);
+        updateSales(rows);
       });
-    </script>
-  </body>
+
+      document.getElementById('invoiceFile').addEventListener('change', async (event) => {
+        const files = Array.from(event.target.files || []);
+        if (!files.length) return;
+        const rows = await readInvoiceFiles(files);
+        updateInvoices(rows);
+      });
+
+      document.getElementById('forecastFile').addEventListener('change', async (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+        const rows = await readSpreadsheet(file);
+        updateForecast(rows);
+      });
+
+      updateSales(sampleSales);
+      updateInvoices(sampleInvoices);
+      updateForecast(sampleForecastRaw);
+    });
+  </script>
+</body>
+
 </html>
