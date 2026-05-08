@@ -477,14 +477,18 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="../index.html#hero">Inicio</a></li>
-          <li><a href="../index.html#mission-vision">Nosotros</a></li>
-          <li><a href="../index.html#services">Servicios</a></li>
-          <li><a href="../index.html#portfolio">Portafolio</a></li>
-          <li><a href="./index.html" class="active">Demo</a></li>
-          <li><a href="../index.html#pricing">Precios</a></li>
-          <li><a href="../index.html#contact">Contacto</a></li>
+          <li><a href="/" data-home-scroll="hero">Inicio</a></li>
+          <li><a href="/" data-home-scroll="mission-vision">Nosotros</a></li>
+          <li><a href="/" data-home-scroll="services">Servicios</a></li>
+          <li><a href="/" data-home-scroll="portfolio">Portafolio</a></li>
+
+          <!-- DEMO -->
+          <li><a href="/demo/" class="active">Demo</a></li>
+
+          <li><a href="/" data-home-scroll="pricing">Precios</a></li>
+          <li><a href="/" data-home-scroll="contact">Contacto</a></li>
         </ul>
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -1575,5 +1579,26 @@
       updateForecast(sampleForecastRaw);
     });
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelectorAll("[data-home-scroll]").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const section = link.getAttribute("data-home-scroll");
+
+        if (window.location.protocol === "file:") {
+          window.location.href = `../index.html#${section}`;
+        } else {
+          window.location.href = `/#${section}`;
+        }
+      });
+    });
+
+  });
+  </script>
+
 </body>
 </html>

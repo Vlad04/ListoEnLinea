@@ -48,17 +48,18 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-  <ul>
-    <li><a href="#hero" class="active">Inicio</a></li>
-    <li><a href="#mission-vision">Nosotros</a></li>
-    <li><a href="#services">Servicios</a></li>
-    <li><a href="#portfolio">Portafolio</a></li>
-    <li><a id="demo-link" href="demo/index.html">Demo</a></li>
-    <li><a href="#pricing">Precios</a></li>
-    <li><a href="#contact">Contacto</a></li>
-  </ul>
-  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
+        <ul>
+          <li><a href="#" data-scroll="hero" class="active">Inicio</a></li>
+          <li><a href="#" data-scroll="mission-vision">Nosotros</a></li>
+          <li><a href="#" data-scroll="services">Servicios</a></li>
+          <li><a href="#" data-scroll="portfolio">Portafolio</a></li>
+          <li><a id="demo-link" href="demo/index.html">Demo</a></li>
+          <li><a href="#" data-scroll="pricing">Precios</a></li>
+          <li><a href="#" data-scroll="contact">Contacto</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
       <a class="cta-btn" href="#contact">Contáctanos</a>
 
@@ -899,6 +900,41 @@
     }
   });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Scroll limpio sin hashes
+  document.querySelectorAll("[data-scroll]").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const targetId = link.getAttribute("data-scroll");
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+
+  // Demo local vs producción
+  const demoLink = document.getElementById("demo-link");
+
+  if (demoLink) {
+    demoLink.href =
+      window.location.protocol === "file:"
+        ? "demo/index.html"
+        : "/demo/";
+  }
+
+});
+</script>
+
+
 
 </body>
 
