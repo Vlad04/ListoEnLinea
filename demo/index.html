@@ -1893,74 +1893,88 @@
       const chartLabels = data.chart?.labels || [];
       const chartData = data.chart?.data || [];
 
+      const secondChartLabels = rows.map(row => row[0]).slice(0, 6);
+      const secondChartData = rows.map(row => {
+        const value = row[1] || 0;
+        return Number(String(value).replace(/[^0-9.-]/g, "")) || Math.floor(Math.random() * 80) + 20;
+      }).slice(0, 6);
+
       result.innerHTML = `
-        <div class="result-panel">
-          <div class="result-panel-title">
-            <h6>${data.title || "Demo generada con IA"}</h6>
-            <small>Resultado personalizado</small>
+    <div class="ai-executive-dashboard">
+      <div class="ai-dashboard-header">
+        <div>
+          <h4>${data.title || "Dashboard ejecutivo generado con IA"}</h4>
+          <p>${data.summary || "Demo ejecutiva sugerida para visualizar ventas, inventario y oportunidades de crecimiento."}</p>
+        </div>
+        <div class="ai-dashboard-badge">
+          <i class="bi bi-stars me-1"></i> Demo personalizada
+        </div>
+      </div>
+
+      <div class="ai-dashboard-kpis">
+        ${kpis.map(kpi => `
+          <div class="ai-dashboard-kpi">
+            <span>${kpi.label || "Indicador"}</span>
+            <strong>${kpi.value || "-"}</strong>
           </div>
+        `).join("")}
+      </div>
 
-          <div class="p-4">
-            <p class="mb-0">${data.summary || ""}</p>
-
-            <div class="ai-kpi-grid">
-              ${kpis.map(kpi => `
-                <div class="ai-kpi-card">
-                  <span>${kpi.label || "KPI"}</span>
-                  <strong>${kpi.value || "-"}</strong>
-                </div>
-              `).join("")}
-            </div>
-
-            <div class="result-panel mb-4">
-              <div class="result-panel-title">
-                <h6>${data.table?.title || "Tabla sugerida"}</h6>
-                <small>${rows.length} registros</small>
-              </div>
-
-              <div class="table-wrap">
-                <table class="table table-hover table-bordered mb-0">
-                  <thead>
-                    <tr>
-                      ${columns.map(col => `<th>${col}</th>`).join("")}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${rows.map(row => `
-                      <tr>
-                        ${columns.map(col => {
-        const value = Array.isArray(row)
-          ? row[columns.indexOf(col)]
-          : row[col];
-
-        return `<td>${value ?? ""}</td>`;
-      }).join("")}
-                      </tr>
-                    `).join("")}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="result-panel mb-4">
-              <div class="result-panel-title">
-                <h6>${data.chart?.title || "Gráfica sugerida"}</h6>
-                <small>Generada por IA</small>
-              </div>
-              <div class="chart-box">
-                <canvas id="aiGeneratedChart"></canvas>
-              </div>
-            </div>
-
-            <div class="alert-soft mb-0">
-              <strong>Recomendación inicial:</strong><br>
-              ${data.recommendation || "Podemos adaptar esta demo a datos reales de tu negocio."}
-            </div>
+      <div class="ai-dashboard-grid">
+        <div class="ai-panel">
+          <div class="ai-panel-title">
+            <h5>${data.chart?.title || "Tendencia mensual"}</h5>
+            <small>Simulación ejecutiva</small>
+          </div>
+          <div class="ai-chart-box-lg">
+            <canvas id="aiGeneratedChart"></canvas>
           </div>
         </div>
-      `;
 
-      drawAiGeneratedChart(chartLabels, chartData, data.chart?.title || "Demo IA");
+        <div class="ai-panel">
+          <div class="ai-panel-title">
+            <h5>Ranking de productos</h5>
+            <small>Top oportunidades</small>
+          </div>
+          <div class="ai-chart-box-sm">
+            <canvas id="aiProductsChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-panel mb-3">
+        <div class="ai-panel-title">
+          <h5>${data.table?.title || "Tabla de análisis operativo"}</h5>
+          <small>${rows.length} registros</small>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table table-hover table-bordered mb-0">
+            <thead>
+              <tr>
+                ${columns.map(col => `<th>${col}</th>`).join("")}
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(row => `
+                <tr>
+                  ${row.map(cell => `<td>${cell}</td>`).join("")}
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="ai-recommendation-pro">
+        <strong><i class="bi bi-lightbulb me-1"></i> Recomendación IA</strong>
+        ${data.recommendation || "Se recomienda conectar esta demo a datos reales para automatizar reportes, detectar productos críticos y mejorar decisiones de compra."}
+      </div>
+    </div>
+  `;
+
+      drawAiGeneratedChart(chartLabels, chartData, data.chart?.title || "Tendencia mensual");
+      drawAiProductsChart(secondChartLabels, secondChartData);
     }
 
     function drawAiGeneratedChart(labels, data, label) {
@@ -1978,8 +1992,10 @@
           datasets: [{
             label,
             data,
+            backgroundColor: "rgba(15, 151, 186, 0.78)",
+            borderColor: "rgba(15, 151, 186, 1)",
             borderWidth: 1,
-            borderRadius: 10
+            borderRadius: 12
           }]
         },
         options: {
@@ -1992,6 +2008,50 @@
           scales: {
             y: { beginAtZero: true, grid: { color: "rgba(7,27,44,.08)" } },
             x: { grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    let aiProductsChart = null;
+
+    function drawAiProductsChart(labels, data) {
+      const canvas = document.getElementById("aiProductsChart");
+      if (!canvas || !window.Chart) return;
+
+      if (aiProductsChart) {
+        aiProductsChart.destroy();
+      }
+
+      aiProductsChart = new Chart(canvas, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{
+            label: "Productos",
+            data,
+            backgroundColor: "rgba(15, 151, 186, 0.85)",
+            borderColor: "rgba(15, 151, 186, 1)",
+            borderWidth: 1,
+            borderRadius: 10
+          }]
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { mode: "index", intersect: false }
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              grid: { color: "rgba(7,27,44,.08)" }
+            },
+            y: {
+              grid: { display: false }
+            }
           }
         }
       });
