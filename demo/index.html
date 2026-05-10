@@ -472,6 +472,98 @@
       transform: translateY(-2px);
     }
 
+    .ai-demo-card {
+      background: #ffffff;
+      border: 1px solid var(--lel-border);
+      border-radius: 34px;
+      box-shadow: var(--lel-shadow);
+      overflow: hidden;
+    }
+
+    .ai-demo-header {
+      padding: 34px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(15, 151, 186, .22), transparent 32%),
+        linear-gradient(135deg, #071b2c, #0b2940);
+      color: #fff;
+    }
+
+    .ai-demo-header h3 {
+      color: #fff;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
+    }
+
+    .ai-demo-header p {
+      color: rgba(255, 255, 255, .78);
+      margin-bottom: 0;
+    }
+
+    .ai-chat-box {
+      padding: 28px;
+    }
+
+    .ai-input {
+      border-radius: 20px;
+      border: 1px solid rgba(15, 151, 186, .22);
+      min-height: 135px;
+      resize: vertical;
+      padding: 16px;
+    }
+
+    .ai-result {
+      margin-top: 24px;
+    }
+
+    .ai-loading {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      color: var(--lel-primary);
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+    .ai-loading.active {
+      display: flex;
+    }
+
+    .ai-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .ai-kpi-card {
+      background: #f8fdfe;
+      border: 1px solid rgba(15, 151, 186, .14);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .ai-kpi-card span {
+      display: block;
+      color: var(--lel-muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .ai-kpi-card strong {
+      color: var(--lel-navy);
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    @media (max-width: 991px) {
+      .ai-kpi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .driver-popover {
       border-radius: 20px !important;
       padding: 18px !important;
@@ -601,7 +693,7 @@
               actualizadas en tiempo real. Todo funciona desde tu navegador.
             </p>
             <div class="hero-actions">
-              <a href="#demo-ventas" class="btn-lel-primary">Explorar demos</a>
+              <a href="#demo-ia" class="btn-lel-primary">Generar demo con IA</a>
               <a href="/" data-home-scroll="contact" class="btn-lel-outline">Solicitar demo personalizada</a>
             </div>
           </div>
@@ -626,6 +718,52 @@
       </div>
     </section>
 
+
+    <section id="demo-ia" class="demo-section">
+      <div class="container">
+        <div class="ai-demo-card" data-aos="fade-up">
+          <div class="ai-demo-header">
+            <div class="demo-eyebrow">
+              <i class="bi bi-stars"></i>
+              Demo generada con IA
+            </div>
+            <h3>Cuéntanos sobre tu negocio y generamos una demo para ti en segundos</h3>
+            <p>
+              Describe tu negocio y la IA construirá una demo ejecutiva con KPIs, análisis visual, tabla de
+              oportunidades y una recomendación inicial para mejorar tu operación.
+            </p>
+          </div>
+
+          <div class="ai-chat-box">
+            <label for="aiBusinessInput" class="form-label fw-bold">
+              Platícanos qué necesitas
+            </label>
+
+            <textarea id="aiBusinessInput" class="form-control ai-input"
+              placeholder="Ejemplo: Tengo una papelería y quiero controlar ventas, inventario, productos más vendidos, meses fuertes, meses débiles y una sugerencia de compra futura."></textarea>
+
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <button id="generateAiDemoBtn" type="button" class="btn-lel-primary">
+                <i class="bi bi-magic me-1"></i> Generar demo con IA
+              </button>
+
+              <button id="clearAiDemoBtn" type="button" class="btn-lel-outline"
+                style="color:#071b2c;border-color:rgba(15,151,186,.28);background:#fff;">
+                Limpiar
+              </button>
+            </div>
+
+            <div id="aiDemoLoading" class="ai-loading">
+              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              Generando demo personalizada...
+            </div>
+
+            <div id="aiDemoResult" class="ai-result"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="demo-section">
       <div class="container">
         <div class="demo-section-title text-center" data-aos="fade-up">
@@ -639,6 +777,7 @@
         </div>
 
         <div class="demo-tabs" data-aos="fade-up" data-aos-delay="100">
+          <a href="#demo-ia"><i class="bi bi-stars me-1"></i> IA Demo</a>
           <a href="#demo-ventas"><i class="bi bi-bar-chart-line me-1"></i> Ventas</a>
           <a href="#demo-facturas"><i class="bi bi-receipt me-1"></i> Facturas</a>
           <a href="#demo-forecast"><i class="bi bi-graph-up-arrow me-1"></i> Forecast</a>
@@ -1685,6 +1824,195 @@
   </script>
 
   <script>
+    let aiGeneratedChart = null;
+
+    async function generateAiDemo() {
+      const input = document.getElementById("aiBusinessInput");
+      const result = document.getElementById("aiDemoResult");
+      const loading = document.getElementById("aiDemoLoading");
+      const button = document.getElementById("generateAiDemoBtn");
+
+      const message = input.value.trim();
+
+      if (!message) {
+        alert("Cuéntame primero sobre tu negocio o qué demo necesitas.");
+        return;
+      }
+
+      loading.classList.add("active");
+      button.disabled = true;
+      result.innerHTML = "";
+
+      try {
+        const response = await fetch("https://listo-ai-backend.vercel.app/api/generate-demo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ message })
+        });
+
+        const rawText = await response.text();
+
+        let data;
+        try {
+          data = JSON.parse(rawText);
+        } catch {
+          throw new Error(`Respuesta no JSON. Status: ${response.status}. Respuesta: ${rawText}`);
+        }
+
+        if (!response.ok || data.error) {
+          throw new Error(
+            `Status ${response.status} - ${data.error || "Error"}: ${data.detail || "Sin detalle"}`
+          );
+        }
+
+        renderAiDemo(data);
+
+      } catch (error) {
+        console.error("Error completo IA:", error);
+
+        result.innerHTML = `
+          <div class="alert-soft">
+            <strong>No pudimos generar la demo.</strong><br>
+            <code>${error.message}</code>
+          </div>
+        `;
+      } finally {
+        loading.classList.remove("active");
+        button.disabled = false;
+      }
+    }
+
+    function renderAiDemo(data) {
+      const result = document.getElementById("aiDemoResult");
+
+      const kpis = Array.isArray(data.kpis) ? data.kpis : [];
+      const columns = data.table?.columns || [];
+      const rows = data.table?.rows || [];
+      const chartLabels = data.chart?.labels || [];
+      const chartData = data.chart?.data || [];
+
+      result.innerHTML = `
+        <div class="result-panel">
+          <div class="result-panel-title">
+            <h6>${data.title || "Demo generada con IA"}</h6>
+            <small>Resultado personalizado</small>
+          </div>
+
+          <div class="p-4">
+            <p class="mb-0">${data.summary || ""}</p>
+
+            <div class="ai-kpi-grid">
+              ${kpis.map(kpi => `
+                <div class="ai-kpi-card">
+                  <span>${kpi.label || "KPI"}</span>
+                  <strong>${kpi.value || "-"}</strong>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="result-panel mb-4">
+              <div class="result-panel-title">
+                <h6>${data.table?.title || "Tabla sugerida"}</h6>
+                <small>${rows.length} registros</small>
+              </div>
+
+              <div class="table-wrap">
+                <table class="table table-hover table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      ${columns.map(col => `<th>${col}</th>`).join("")}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${rows.map(row => `
+                      <tr>
+                        ${columns.map(col => {
+        const value = Array.isArray(row)
+          ? row[columns.indexOf(col)]
+          : row[col];
+
+        return `<td>${value ?? ""}</td>`;
+      }).join("")}
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="result-panel mb-4">
+              <div class="result-panel-title">
+                <h6>${data.chart?.title || "Gráfica sugerida"}</h6>
+                <small>Generada por IA</small>
+              </div>
+              <div class="chart-box">
+                <canvas id="aiGeneratedChart"></canvas>
+              </div>
+            </div>
+
+            <div class="alert-soft mb-0">
+              <strong>Recomendación inicial:</strong><br>
+              ${data.recommendation || "Podemos adaptar esta demo a datos reales de tu negocio."}
+            </div>
+          </div>
+        </div>
+      `;
+
+      drawAiGeneratedChart(chartLabels, chartData, data.chart?.title || "Demo IA");
+    }
+
+    function drawAiGeneratedChart(labels, data, label) {
+      const canvas = document.getElementById("aiGeneratedChart");
+      if (!canvas || !window.Chart) return;
+
+      if (aiGeneratedChart) {
+        aiGeneratedChart.destroy();
+      }
+
+      aiGeneratedChart = new Chart(canvas, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{
+            label,
+            data,
+            borderWidth: 1,
+            borderRadius: 10
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { mode: "index", intersect: false }
+          },
+          scales: {
+            y: { beginAtZero: true, grid: { color: "rgba(7,27,44,.08)" } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("generateAiDemoBtn")?.addEventListener("click", generateAiDemo);
+
+      document.getElementById("clearAiDemoBtn")?.addEventListener("click", () => {
+        document.getElementById("aiBusinessInput").value = "";
+        document.getElementById("aiDemoResult").innerHTML = "";
+
+        if (aiGeneratedChart) {
+          aiGeneratedChart.destroy();
+          aiGeneratedChart = null;
+        }
+      });
+    });
+  </script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("[data-home-scroll]").forEach(link => {
         link.addEventListener("click", (e) => {
@@ -1724,6 +2052,15 @@
               description: 'Aquí tus clientes pueden probar mini demos reales antes de imaginar una solución para su negocio.',
               side: 'bottom',
               align: 'start'
+            }
+          },
+          {
+            element: '#demo-ia',
+            popover: {
+              title: 'Genera una demo con IA',
+              description: 'El usuario puede contarle a la IA sobre su negocio y recibir KPIs, tabla, gráfica y recomendación personalizada.',
+              side: 'top',
+              align: 'center'
             }
           },
           {
