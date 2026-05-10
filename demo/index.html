@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demo | Listo En Línea</title>
-  <meta name="description" content="Demos interactivas de soluciones digitales para negocios: análisis de ventas, facturas e inventario.">
-  <meta name="keywords" content="demo software, dashboards, análisis de ventas, facturas, forecast, inventario, soluciones digitales">
+  <meta name="description"
+    content="Demos interactivas de soluciones digitales para negocios: análisis de ventas, facturas e inventario.">
+  <meta name="keywords"
+    content="demo software, dashboards, análisis de ventas, facturas, forecast, inventario, soluciones digitales">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icono/favicon-32x32.png">
@@ -17,8 +20,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css">
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -64,8 +69,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
       background-size: 42px 42px;
       mask-image: linear-gradient(to bottom, black, transparent 95%);
     }
@@ -81,8 +86,8 @@
       gap: 8px;
       padding: 9px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       font-weight: 600;
       font-size: 14px;
       margin-bottom: 18px;
@@ -100,7 +105,7 @@
 
     .demo-hero p {
       font-size: 1.12rem;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255, 255, 255, 0.82);
       max-width: 760px;
       margin-bottom: 28px;
     }
@@ -125,7 +130,7 @@
       background: var(--lel-primary);
       color: #fff;
       border: 1px solid var(--lel-primary);
-      box-shadow: 0 16px 30px rgba(15,151,186,.28);
+      box-shadow: 0 16px 30px rgba(15, 151, 186, .28);
     }
 
     .btn-lel-primary:hover {
@@ -135,9 +140,9 @@
     }
 
     .btn-lel-outline {
-      background: rgba(255,255,255,.09);
+      background: rgba(255, 255, 255, .09);
       color: #fff;
-      border: 1px solid rgba(255,255,255,.32);
+      border: 1px solid rgba(255, 255, 255, .32);
     }
 
     .btn-lel-outline:hover {
@@ -160,21 +165,21 @@
     }
 
     .hero-dashboard-card {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 34px;
       padding: 22px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.22);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
       backdrop-filter: blur(20px);
     }
 
     .hero-mini-card {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.92);
       color: var(--lel-navy);
       border-radius: 24px;
       padding: 18px;
       margin-bottom: 14px;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
     }
 
     .hero-mini-card small {
@@ -223,7 +228,7 @@
       border: 1px solid var(--lel-border);
       font-weight: 800;
       text-decoration: none;
-      box-shadow: 0 8px 22px rgba(7,27,44,.06);
+      box-shadow: 0 8px 22px rgba(7, 27, 44, .06);
     }
 
     .demo-tabs a:hover {
@@ -244,7 +249,7 @@
     .demo-card-header {
       padding: 28px;
       background:
-        radial-gradient(circle at 18% 10%, rgba(15,151,186,.24), transparent 30%),
+        radial-gradient(circle at 18% 10%, rgba(15, 151, 186, .24), transparent 30%),
         linear-gradient(135deg, #ffffff 0%, #f3fbfd 100%);
       border-bottom: 1px solid var(--lel-border);
     }
@@ -256,7 +261,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(15,151,186,.12);
+      background: rgba(15, 151, 186, .12);
       color: var(--lel-primary);
       font-size: 28px;
       margin-bottom: 16px;
@@ -279,7 +284,7 @@
     }
 
     .demo-upload-box {
-      border: 1.5px dashed rgba(15,151,186,.38);
+      border: 1.5px dashed rgba(15, 151, 186, .38);
       border-radius: 22px;
       background: #f8fdfe;
       padding: 18px;
@@ -300,7 +305,7 @@
     }
 
     .kpi-card {
-      border: 1px solid rgba(15,151,186,.12);
+      border: 1px solid rgba(15, 151, 186, .12);
       background: #ffffff;
       border-radius: 18px;
       padding: 14px;
@@ -325,7 +330,7 @@
     }
 
     .result-panel {
-      border: 1px solid rgba(15,151,186,.14);
+      border: 1px solid rgba(15, 151, 186, .14);
       border-radius: 22px;
       overflow: hidden;
       background: #fff;
@@ -334,7 +339,7 @@
     .result-panel-title {
       padding: 14px 16px;
       background: #f5fbfd;
-      border-bottom: 1px solid rgba(15,151,186,.12);
+      border-bottom: 1px solid rgba(15, 151, 186, .12);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -384,7 +389,7 @@
 
     .cta-demo {
       background:
-        radial-gradient(circle at 20% 20%, rgba(15,151,186,.35), transparent 30%),
+        radial-gradient(circle at 20% 20%, rgba(15, 151, 186, .35), transparent 30%),
         linear-gradient(135deg, #071b2c, #0b2940);
       border-radius: 34px;
       color: #fff;
@@ -399,13 +404,13 @@
     }
 
     .cta-demo p {
-      color: rgba(255,255,255,.78);
+      color: rgba(255, 255, 255, .78);
       margin-bottom: 0;
     }
 
     .alert-soft {
-      background: rgba(15,151,186,.08);
-      border: 1px solid rgba(15,151,186,.18);
+      background: rgba(15, 151, 186, .08);
+      border: 1px solid rgba(15, 151, 186, .18);
       color: var(--lel-navy);
       border-radius: 18px;
       padding: 14px 16px;
@@ -417,8 +422,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(15,151,186,.10);
-      border: 1px solid rgba(15,151,186,.22);
+      background: rgba(15, 151, 186, .10);
+      border: 1px solid rgba(15, 151, 186, .22);
       color: var(--lel-navy);
       border-radius: 999px;
       padding: 8px 12px;
@@ -436,7 +441,7 @@
 
     .table-wrap td[contenteditable="true"]:hover {
       background: #eefaff;
-      box-shadow: inset 0 0 0 1px rgba(15,151,186,.28);
+      box-shadow: inset 0 0 0 1px rgba(15, 151, 186, .28);
     }
 
     .table-wrap td[contenteditable="true"]:focus {
@@ -446,7 +451,92 @@
     }
 
     .table-wrap td[contenteditable="true"]::selection {
-      background: rgba(15,151,186,.25);
+      background: rgba(15, 151, 186, .25);
+    }
+
+    .demo-guide-floating-btn {
+      position: fixed;
+      right: 24px;
+      bottom: 92px;
+      z-index: 9998;
+      border: 0;
+      background: linear-gradient(135deg, #0F97BA, #006DFF);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      box-shadow: 0 18px 42px rgba(15, 151, 186, .35);
+    }
+
+    .demo-guide-floating-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .driver-popover {
+      border-radius: 20px !important;
+      padding: 18px !important;
+      box-shadow: 0 24px 70px rgba(7, 27, 44, .25) !important;
+    }
+
+    .driver-popover-title {
+      font-family: Raleway, sans-serif !important;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      color: #071b2c !important;
+    }
+
+    .driver-popover-description {
+      color: #637381 !important;
+      font-size: 14px !important;
+    }
+
+    .driver-popover-footer button,
+    .driver-popover-navigation-btns button,
+    .driver-popover-next-btn,
+    .driver-popover-prev-btn,
+    .driver-popover-close-btn {
+      font-family: var(--nav-font) !important;
+      font-size: 12px !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+      text-align: center !important;
+      min-width: auto !important;
+      width: auto !important;
+      height: auto !important;
+      padding: 9px 13px !important;
+      border-radius: 999px !important;
+      font-weight: 800 !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+      transform: none !important;
+    }
+
+    .driver-popover-next-btn {
+      background: #0F97BA !important;
+      color: #fff !important;
+      border: 1px solid #0F97BA !important;
+    }
+
+    .driver-popover-prev-btn {
+      background: #f4f9fb !important;
+      color: #637381 !important;
+      border: 1px solid #d8e7ec !important;
+    }
+
+    .driver-popover-navigation-btns {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+    }
+
+    .driver-popover-next-btn::before,
+    .driver-popover-next-btn::after,
+    .driver-popover-prev-btn::before,
+    .driver-popover-prev-btn::after,
+    .driver-popover-close-btn::before,
+    .driver-popover-close-btn::after {
+      display: none !important;
+      content: none !important;
     }
 
     @media (max-width: 991px) {
@@ -541,8 +631,10 @@
         <div class="demo-section-title text-center" data-aos="fade-up">
           <h2>Demos listas para probar</h2>
           <p>
-            Cada demo incluye archivo descargable, carga de archivo, tabla visual y gráfica. Puedes modificar el template en Excel
-            o editar las celdas directamente en la tabla para ver cómo las métricas y gráficas se actualizan en tiempo real.
+            Cada demo incluye archivo descargable, carga de archivo, tabla visual y gráfica. Puedes modificar el
+            template en Excel
+            o editar las celdas directamente en la tabla para ver cómo las métricas y gráficas se actualizan en tiempo
+            real.
           </p>
         </div>
 
@@ -756,8 +848,10 @@
                   <div class="demo-note">Columnas sugeridas: Mes, Producto, Ventas, Inventario.</div>
                   <div class="alert-soft mt-3">
                     <strong>Cómo funciona:</strong>
-                    esta demo calcula automáticamente un inventario objetivo usando la demanda estimada + 25% de colchón de
-                    seguridad. Si el inventario actual es menor al objetivo, el sistema calcula automáticamente la compra sugerida.
+                    esta demo calcula automáticamente un inventario objetivo usando la demanda estimada + 25% de colchón
+                    de
+                    seguridad. Si el inventario actual es menor al objetivo, el sistema calcula automáticamente la
+                    compra sugerida.
                   </div>
                 </div>
 
@@ -845,7 +939,8 @@
   <footer id="footer" class="footer dark-background">
     <div class="container footer-container text-center">
       <div class="footer-logo-wrapper">
-        <img src="../assets/img/logo_listo_white.png" alt="Listo en Línea" class="footer-logo" loading="lazy" decoding="async">
+        <img src="../assets/img/logo_listo_white.png" alt="Listo en Línea" class="footer-logo" loading="lazy"
+          decoding="async">
       </div>
 
       <p class="footer-description">
@@ -853,9 +948,12 @@
       </p>
 
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/profile.php?id=61589022853078" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/listoenlinea.soluciones/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.tiktok.com/@listoenlinea.soluciones" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61589022853078" target="_blank" aria-label="Facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/listoenlinea.soluciones/" target="_blank" aria-label="Instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@listoenlinea.soluciones" target="_blank" rel="noopener noreferrer"
+          aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
         <a href="https://wa.me/523312306526" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
       </div>
 
@@ -872,9 +970,14 @@
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Volver arriba">
     <i class="bi bi-arrow-up-short"></i>
   </a>
+
+  <button id="startDemoGuide" class="demo-guide-floating-btn">
+    <i class="bi bi-stars me-1"></i> Guía rápida
+  </button>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
@@ -890,6 +993,7 @@
   <!-- Main JS File -->
   <script src="../assets/js/main.js" defer></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js" defer></script>
   <script defer>
     window.addEventListener('DOMContentLoaded', () => {
       const money = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
@@ -969,14 +1073,14 @@
         const tbody = rows.map((row, rowIndex) => `
           <tr>
             ${columns.map(c => {
-              const rawValue = row[c.key] ?? '';
-              const displayValue = c.format ? c.format(rawValue, row) : rawValue;
-              const canEdit = editable && c.editable !== false;
+          const rawValue = row[c.key] ?? '';
+          const displayValue = c.format ? c.format(rawValue, row) : rawValue;
+          const canEdit = editable && c.editable !== false;
 
-              if (c.inputType === 'select') {
-                const selectOptions = c.options || [];
+          if (c.inputType === 'select') {
+            const selectOptions = c.options || [];
 
-                return `
+            return `
                   <td data-row="${rowIndex}" data-key="${c.key}" data-type="${c.type || 'text'}">
                     <select class="form-select form-select-sm demo-cell-select">
                       ${selectOptions.map(opt => `
@@ -987,9 +1091,9 @@
                     </select>
                   </td>
                 `;
-              }
+          }
 
-              return `
+          return `
                 <td
                   ${canEdit ? 'contenteditable="true"' : ''}
                   data-row="${rowIndex}"
@@ -997,7 +1101,7 @@
                   data-type="${c.type || 'text'}"
                 >${displayValue}</td>
               `;
-            }).join('')}
+        }).join('')}
           </tr>
         `).join('');
 
@@ -1598,5 +1702,147 @@
     });
   </script>
 
+  <script>
+    window.addEventListener('load', () => {
+      if (!window.driver || !window.driver.js) return;
+
+      const driverObj = window.driver.js.driver({
+        showProgress: true,
+        allowClose: true,
+        overlayOpacity: 0.72,
+        smoothScroll: true,
+        stagePadding: 8,
+        nextBtnText: 'Siguiente',
+        prevBtnText: 'Atrás',
+        doneBtnText: 'Terminar',
+        popoverClass: 'lel-driver-popover',
+        steps: [
+          {
+            element: '.demo-hero',
+            popover: {
+              title: 'Bienvenido al laboratorio interactivo',
+              description: 'Aquí tus clientes pueden probar mini demos reales antes de imaginar una solución para su negocio.',
+              side: 'bottom',
+              align: 'start'
+            }
+          },
+          {
+            element: '.demo-tabs',
+            popover: {
+              title: 'Elige una demo',
+              description: 'Pueden probar ventas, facturas o forecast de inventario. Cada demo muestra una solución diferente.',
+              side: 'bottom',
+              align: 'center'
+            }
+          },
+          {
+            element: '#demo-ventas .btn-lel-dark',
+            popover: {
+              title: 'Descarga un template',
+              description: 'El usuario puede descargar un archivo de ejemplo, modificarlo en Excel y volverlo a cargar.',
+              side: 'right',
+              align: 'center'
+            }
+          },
+          {
+            element: '#salesFile',
+            popover: {
+              title: 'Sube datos actualizados',
+              description: 'Al cargar el archivo, la tabla, KPIs y gráfica se recalculan automáticamente en el navegador.',
+              side: 'right',
+              align: 'center'
+            }
+          },
+          {
+            element: '#salesTable',
+            popover: {
+              title: 'Edita en vivo',
+              description: 'Algunas celdas son editables. El usuario puede modificar datos directamente y ver los cambios al instante.',
+              side: 'top',
+              align: 'center'
+            }
+          },
+          {
+            element: '#salesChart',
+            popover: {
+              title: 'Gráficas automáticas',
+              description: 'Las gráficas se actualizan con los datos cargados o editados, simulando una solución real de dashboard.',
+              side: 'top',
+              align: 'center'
+            }
+          },
+          {
+            element: '#demo-facturas',
+            popover: {
+              title: 'Clasificador de facturas',
+              description: 'Esta demo muestra cómo se puede clasificar información usando reglas simples y automatización.',
+              side: 'top',
+              align: 'center'
+            }
+          },
+          {
+            element: '#invoiceTable',
+            popover: {
+              title: 'Catálogo de conceptos',
+              description: 'El usuario puede cambiar el concepto desde un selector y la clasificación se recalcula automáticamente.',
+              side: 'top',
+              align: 'center'
+            }
+          },
+          {
+            element: '#demo-forecast',
+            popover: {
+              title: 'Forecast de inventario',
+              description: 'Aquí se estima demanda, inventario objetivo y compra sugerida con una regla simple de negocio.',
+              side: 'top',
+              align: 'center'
+            }
+          },
+          {
+            element: '#forecastTable',
+            popover: {
+              title: 'Cálculo automático',
+              description: 'La demanda estimada alimenta el inventario objetivo y la compra sugerida. Ideal para explicar valor rápido.',
+              side: 'top',
+              align: 'center'
+            }
+          },
+          {
+            element: '.result-panel-title button',
+            popover: {
+              title: 'Descarga el reporte',
+              description: 'Cada demo puede descargar un Excel profesional con los datos actuales y la gráfica generada.',
+              side: 'left',
+              align: 'center'
+            }
+          },
+          {
+            element: '.cta-demo',
+            popover: {
+              title: 'Convierte la demo en contacto',
+              description: 'Después de probar, el usuario puede solicitar una demo conectada a sus datos reales.',
+              side: 'top',
+              align: 'center'
+            }
+          }
+        ]
+      });
+
+      const startBtn = document.getElementById('startDemoGuide');
+
+      startBtn?.addEventListener('click', () => {
+        driverObj.drive();
+      });
+
+      if (!localStorage.getItem('listoDemoGuideSeen')) {
+        setTimeout(() => {
+          driverObj.drive();
+          localStorage.setItem('listoDemoGuideSeen', 'true');
+        }, 900);
+      }
+    });
+  </script>
+
 </body>
+
 </html>
